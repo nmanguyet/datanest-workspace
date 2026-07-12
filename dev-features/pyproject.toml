@@ -1,0 +1,37 @@
+[project]
+name = "dev_fts"
+version = "0.1.4"
+# Chặn không cho uv tự động quét lên Python 3.14 (nguyên nhân gây lỗi build wheel)
+requires-python = ">=3.12, <3.13"
+dependencies = [
+    "fsspec>=2025.9.0",
+    "numpy>=2.3.3",
+    "pandas>=2.3.3",
+    "plotly>=6.3.1",
+    "pyarrow>=21.0.0",
+    "duckdb>=1.4.3",
+    "sqlglot>=30.4.3",
+    "seaborn>=0.13.2",
+    "ocrmac>=1.0.1",
+    "pytesseract>=0.3.13",
+    "requests>=2.33.1",
+    "pillow>=12.2.0",
+    "pyspark>=4.1.1",
+    "scikit-learn>=1.8.0",
+    "catboost>=1.2.10",
+    "shap>=0.46.0",
+    "llvmlite>=0.44.0",
+    "openpyxl>=3.1.5",
+    "sdmx1>=2.26.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.2.0",
+    "nbformat>=5.10.4",
+]
+
+[tool.uv]
+environments = [
+    "sys_platform == 'darwin' and python_version == '3.12'",
+]
