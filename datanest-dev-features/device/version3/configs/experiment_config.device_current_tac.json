@@ -1,0 +1,48 @@
+{
+    "base_features_path": "/user/nguyetnguyen/tmp/test_new_features/base_df/hc_2025_all_features",
+    "new_features_path": "/user/nguyetnguyen/features/hc_2025/device_current_tac_merge_all",
+    "output_dir": "/apps/jupyter/users/nguyetnguyen/features/device_refactored/results/experiment/device_current_tac_v1",
+    "new_features": [],
+    "all_features_csv": "/apps/jupyter/users/nguyetnguyen/features/device_refactored/configs/all_features.csv",
+    "split_date": "2024-07-01",
+    "base_feature_sample_size": 100,
+    "n_experiments": 30,
+    "seed": 42,
+    "sample_size": null,
+    "data_filter": null,
+    "target_col": "label_value",
+    "join_keys": [
+        "phone_number",
+        "disburse_date"
+    ],
+    "ignore_columns": [
+        "phone_number",
+        "disburse_date",
+        "product",
+        "label_value"
+    ],
+    "removed_features": [],
+    "categoical_to_numeric_patterns_ggsn": [],
+    "categoical_to_numeric_patterns_sms": [],  
+    "categoical_to_numeric_patterns_other": [],
+    "baseline_random": false,
+    "random_col": "__noise__",
+    "top_n_for_shap": 0,
+    "shap_n_samples": 1000,
+    "catboost_params": {
+        "bagging_temperature": 0.1,
+        "border_count": 32,
+        "random_seed": 42,
+        "max_depth": 4,
+        "l2_leaf_reg": 12,
+        "iterations": 5000,
+        "leaf_estimation_iterations": 5,
+        "learning_rate": 0.025,
+        "custom_metric": [
+            "AUC:hints=skip_train~false"
+        ],
+        "thread_count": 15,
+        "verbose": 100,
+        "auto_class_weights": "Balanced"
+    }
+}
