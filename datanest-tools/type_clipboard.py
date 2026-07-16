@@ -17,3 +17,6 @@ for ch in text:
        subprocess.run(["xdotool", "key", "Tab"])
     else:
         subprocess.run(["xdotool", "type", "--delay", "10", "--", ch])
+
+# %%
+
