@@ -1,7 +1,8 @@
+from pathlib import Path
 from datetime import datetime, timedelta
 from pyspark.sql import functions as F
 from pyspark.sql.window import Window
-from pyspark.import StorageLevel
+from pyspark import StorageLevel
 
 import sys
 import time
@@ -23,6 +24,7 @@ from agg_columns import (
     get_lxw_overlap_windows,
     get_feature_columns,
 )
+
 from device_helpers import (
     register_temp_view,
     build_ratio_column,
@@ -183,24 +185,30 @@ def df_pn_current_tac_features_l2w():
                 f"tac as {p}_tac_map",
                 f"device_brand as {p}_brand_{suffix}",
                 f"device_model as {p}_model_{suffix}",
+                f"device_os as {p}_os_{suffix}",
+                f"device_type as {p}_type_{suffix}",
             ),
             F.col(f"{p}_tac_{suffix}") == F.col(f"{p}_tac_map"),
             "left",
         )
-        
+
     drop_cols = [item for cfg in config.CURRENT_TAC_RANKS
-                      for item in [f"{cfg['prefix']}_brand_{suffix}", f"{cfg['prefix']}_model_{suffix}"]]
-                      
-    columns = [c for c in df_ratio.columns if c not in drop_cols] + [c for cfg in config.CURRENT_TAC_RANKS for c in build_tac_columns(cfg["prefix"], suffix)]
-    
+                 for item in [f"{cfg['prefix']}_brand_{suffix}", f"{cfg['prefix']}_model_{suffix}",
+                              f"{cfg['prefix']}_os_{suffix}", f"{cfg['prefix']}_type_{suffix}"]
+                ]
+
+    columns = [c for c in df_ratio.columns if c not in drop_cols] + [c for cfg in config.CURRENT_TAC_RANKS for c in
+                                                                    build_tac_columns(cfg["prefix"], suffix)]
+
     source = register_temp_view(df_ratio, "df_final")
     query = f"select {', '.join(columns)} from {source}"
-    
+
     df = spark.sql(query)
-    
+
     return df.select([
         F.when(F.isnan(c), None).otherwise(F.col(c)).alias(c)
-        for c in df.columns
+        if t in ('double', 'float') else F.col(c)
+        for c, t in df.dtypes
     ])
 
 def main():

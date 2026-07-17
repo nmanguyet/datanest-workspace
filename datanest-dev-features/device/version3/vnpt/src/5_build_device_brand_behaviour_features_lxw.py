@@ -1,3 +1,4 @@
+from pathlib import Path
 from datetime import datetime, timedelta
 from pyspark.sql import functions as F
 from pyspark.sql.window import Window
@@ -42,7 +43,7 @@ spark = init_spark3.setup(
         'executor.cores': 4,
         'executor.memory': '12g',
     },
-    script_name="build_device_tac_behaviour_features"
+    script_name="build_device_brand_behaviour_features"
 )
 spark.conf.set("spark.sql.files.ignoreCorruptFiles", "true")
 
@@ -53,10 +54,10 @@ def df_device_current_raw_weekly():
     return (
         spark.read.parquet(config.DEVICE_CURRENT_TAC_FEATURES_HC_SAMPLE_PATH)
         .filter(
-            (F.col("date") > config.START_DATE_tac_BEHAVIOUR_FEATURES)
+            (F.col("date") > config.START_DATE_BRAND_BEHAVIOUR_FEATURES)
             & (F.col("date") <= config.SNAPSHOT_DATE_STR)
         )
-        .selectExpr("phone_number", "date", f"{config.DEVICE_CURRENT_TAC_COLUMN} as device_current_l12w")
+        .selectExpr("phone_number", "date", f"{config.DEVICE_CURRENT_BRAND_COLUMN} as device_current_l12w")
         .filter(F.col("phone_number").isNotNull() & F.col("device_current_l12w").isNotNull())
     )
 
@@ -110,7 +111,7 @@ def df_device_base_weekly():
 
     for w in config.SWITCH_GAP_WINDOWS_WEEKS:
         sw_col = f"switch_week_l{w}w"
-        gap_col = f"switch_tac_gap_l{w}w"
+        gap_col = f"switch_brand_gap_l{w}w"
         prev_col = f"prev_switch_week_l{w}w"
         window_start = F.expr(f"date_sub('{config.SNAPSHOT_DATE_STR}', {w * 7})")
 
@@ -129,15 +130,15 @@ def df_device_base_weekly():
     return df.persist(StorageLevel.MEMORY_AND_DISK)
 
 
-def df_pn_tac_weekly_stats_lxw():
+def df_pn_brand_weekly_stats_lxw():
     source = register_temp_view(df_device_base_weekly(), "df_device_base")
 
     stats = [
         ("count(distinct date)", "active_weeks"),
-        ("count(case when device_current_l12w = current_device then 1 end)", "device_current_tac_active_weeks"),
-        ("count(distinct device_current_l12w)", "device_current_tac_distinct_count"),
-        ("min(case when device_current_l12w = current_device then date end)", "current_tac_first_seen"),
-        ("max(case when device_current_l12w = current_device then date end)", "current_tac_last_seen"),
+        ("count(case when device_current_l12w = current_device then 1 end)", "device_current_brand_active_weeks"),
+        ("count(distinct device_current_l12w)", "device_current_brand_distinct_count"),
+        ("min(case when device_current_l12w = current_device then date end)", "current_brand_first_seen"),
+        ("max(case when device_current_l12w = current_device then date end)", "current_brand_last_seen"),
     ]
 
     inner_query, _ = build_groupby_window_query(
@@ -152,28 +153,28 @@ def df_pn_tac_weekly_stats_lxw():
     for w in config.WINDOW_WEEKS:
         extra_cols.append(
             build_ratio_column(
-                numerator=f"device_current_tac_active_weeks_l{w}w",
+                numerator=f"device_current_brand_active_weeks_l{w}w",
                 denominator=f"active_weeks_l{w}w",
-                alias=f"device_current_tac_active_ratio_l{w}w"
+                alias=f"device_current_brand_active_ratio_l{w}w"
             )
         )
-        first = f"current_tac_first_seen_l{w}w"
-        last = f"current_tac_last_seen_l{w}w"
-        extra_cols.append(build_datediff_column(last, first, f"device_current_tac_active_span_l{w}w"))
-        # extra_cols.append(build_datediff_column(f"'{config.SNAPSHOT_DATE_STR}'", first, f"device_current_tac_days_since_first_seen_l{w}w"))
-        extra_cols.append(build_datediff_column(f"'{config.SNAPSHOT_DATE_STR}'", last, f"device_current_tac_days_since_last_seen_l{w}w"))
+        first = f"current_brand_first_seen_l{w}w"
+        last = f"current_brand_last_seen_l{w}w"
+        extra_cols.append(build_datediff_column(last, first, f"device_current_brand_active_span_l{w}w"))
+        extra_cols.append(build_datediff_column(f"'{config.SNAPSHOT_DATE_STR}'", first, f"device_current_brand_days_since_first_seen_l{w}w"))
+        extra_cols.append(build_datediff_column(f"'{config.SNAPSHOT_DATE_STR}'", last, f"device_current_brand_days_since_last_seen_l{w}w"))
 
     full_select = ",\n    ".join(extra_cols)
     query = f"SELECT *, {full_select} FROM ({inner_query})"
     return spark.sql(query)
 
 
-def df_pn_tac_switch_stats_lxw():
+def df_pn_brand_switch_stats_lxw():
     base_df = df_device_base_weekly()
     source = register_temp_view(base_df, "df_device_base")
 
     sum_query, _ = build_groupby_window_query(
-        agg_exprs=[("sum(is_switch)", "device_switch_tac_count")],
+        agg_exprs=[("sum(is_switch)", "device_switch_brand_count")],
         windows=get_lxw_windows(window_weeks=config.SWITCH_GAP_WINDOWS_WEEKS),
         group_by=["phone_number"],
         source=source,
@@ -182,7 +183,7 @@ def df_pn_tac_switch_stats_lxw():
     sum_select = sum_query.split("\nFROM")[0].replace("SELECT\n    ", "")
     group_clause = "\nFROM" + sum_query.split("\nFROM")[1]
 
-    gap_cols = [f"switch_tac_gap_l{w}w" for w in config.SWITCH_GAP_WINDOWS_WEEKS]
+    gap_cols = [f"switch_brand_gap_l{w}w" for w in config.SWITCH_GAP_WINDOWS_WEEKS]
     gap_exprs, _ = build_aggregate_columns(
         gap_cols,
         [
@@ -190,8 +191,8 @@ def df_pn_tac_switch_stats_lxw():
             {"func": "max"},
             {"func": "avg"},
             {"func": "std"},
-            {"func": "skewness", "exclude": ['device_switch_tac_gap']},
-            {"func": "kurtosis", "exclude": ['device_switch_tac_gap']},
+            {"func": "skewness"},
+            {"func": "kurtosis"},
         ],
     )
     gap_exprs = [re.sub(r" AS (\w+)", r" AS device_\1", e) for e in gap_exprs]
@@ -201,27 +202,27 @@ def df_pn_tac_switch_stats_lxw():
     return spark.sql(query)
 
 
-def df_pn_tac_streak_features_lxw():
+def df_pn_brand_streak_features_lxw():
     source = register_temp_view(df_device_base_weekly(), "df_streak")
 
     inner_parts = ["phone_number", "switch_group"]
     inner_parts += [
-        f"count(*) FILTER (WHERE is_l{w}w) AS streak_any_tac_week_l{w}w"
+        f"count(*) FILTER (WHERE is_l{w}w) AS streak_any_brand_week_l{w}w"
         for w in config.WINDOW_WEEKS
     ]
     inner_parts += [
-        f"count(*) FILTER (WHERE is_l{w}w AND device_current_l12w = current_device) AS streak_current_tac_week_l{w}w"
+        f"count(*) FILTER (WHERE is_l{w}w AND device_current_l12w = current_device) AS streak_current_brand_week_l{w}w"
         for w in config.WINDOW_WEEKS
     ]
     inner_sql = ",\n    ".join(inner_parts)
 
     outer_parts = ["phone_number"]
     outer_parts += [
-        f"max(streak_any_tac_week_l{w}w) AS device_max_streak_any_tac_week_l{w}w"
+        f"max(streak_any_brand_week_l{w}w) AS device_max_streak_any_brand_week_l{w}w"
         for w in config.WINDOW_WEEKS
     ]
     outer_parts += [
-        f"max(streak_current_tac_week_l{w}w) AS device_max_streak_current_tac_week_l{w}w"
+        f"max(streak_current_brand_week_l{w}w) AS device_max_streak_current_brand_week_l{w}w"
         for w in config.WINDOW_WEEKS
     ]
     outer_sql = ",\n    ".join(outer_parts)
@@ -230,10 +231,10 @@ def df_pn_tac_streak_features_lxw():
     return spark.sql(query)
 
 
-def df_pn_tac_behaviour_features_lxw():
-    weekly = df_pn_tac_weekly_stats_lxw()
-    switch = df_pn_tac_switch_stats_lxw()
-    streak = df_pn_tac_streak_features_lxw()
+def df_pn_brand_behaviour_features_lxw():
+    weekly = df_pn_brand_weekly_stats_lxw()
+    switch = df_pn_brand_switch_stats_lxw()
+    streak = df_pn_brand_streak_features_lxw()
 
     def device_cols(df):
         return ["phone_number"] + [c for c in df.columns if c.startswith("device_")]
@@ -257,8 +258,8 @@ def main():
 
     print(datetime.now(), config.SNAPSHOT_DATE_STR)
 
-    df_pn_tac_behaviour_features_lxw().write.mode('overwrite').parquet(
-        f'{config.DEVICE_tac_BEHAVIOUR_FEATURES_HC_SAMPLE_PATH}/date={config.SNAPSHOT_DATE_STR}'
+    df_pn_brand_behaviour_features_lxw().write.mode('overwrite').parquet(
+        f'{config.DEVICE_BRAND_BEHAVIOUR_FEATURES_HC_SAMPLE_PATH}/date={config.SNAPSHOT_DATE_STR}'
     )
 
     end_time = time.time()

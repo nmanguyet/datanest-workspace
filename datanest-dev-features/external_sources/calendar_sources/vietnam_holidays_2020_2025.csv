@@ -1,0 +1,655 @@
+date,end_date,holiday,calendar,scope,region,year
+2020-01-01,2020-01-01,New Year's Day,solar,national,Vietnam,2020
+2020-01-02,2020-01-02,Ap Bac Victory Commemoration,solar,local,Tien Giang,2020
+2020-01-09,2020-01-09,Vietnamese Students' Day,solar,national,Vietnam,2020
+2020-01-17,2020-01-17,Kitchen Gods Day (Ong Tao),lunar,national,Vietnam,2020
+2020-01-20,2020-01-20,Rach Gam - Xoai Mut Victory Commemoration,solar,local,Tien Giang,2020
+2020-01-25,2020-01-29,Lunar New Year (Tet),lunar,national,Vietnam,2020
+2020-01-28,2020-01-28,Ba Den Mountain Festival,lunar,local,Tay Ninh,2020
+2020-01-28,2020-01-29,Dong Da - Tay Son Festival,lunar,local,Binh Dinh,2020
+2020-01-28,2020-01-28,Tram Gian Pagoda Festival,lunar,local,Hanoi,2020
+2020-01-29,2020-01-29,Ba Be Festival,lunar,local,Bac Kan,2020
+2020-01-29,2020-01-29,Lieu Doi Wrestling Festival,lunar,local,Ha Nam,2020
+2020-01-30,2020-01-30,Bai Dinh Pagoda Opening Festival,lunar,local,Ninh Binh,2020
+2020-01-30,2020-01-30,Giong Festival at Soc Temple,lunar,local,Hanoi,2020
+2020-01-30,2020-02-01,Hai Ba Trung Temple Festival (Me Linh),lunar,local,Hanoi,2020
+2020-01-30,2020-01-30,Huong Pagoda (Perfume Pagoda) Opening Festival,lunar,local,Hanoi,2020
+2020-01-31,2020-01-31,Long Tong (Going-to-Field) Festival,lunar,local,Ha Giang,2020
+2020-02-01,2020-02-01,Giong Festival at Bo Dau,lunar,local,Hanoi,2020
+2020-02-02,2020-02-02,Jade Emperor Pagoda Festival,lunar,local,Ho Chi Minh City,2020
+2020-02-03,2020-02-03,Communist Party of Vietnam Foundation Day,solar,national,Vietnam,2020
+2020-02-03,2020-02-03,Dong Dang Festival,lunar,local,Lang Son,2020
+2020-02-03,2020-02-03,Ha Thai Village Festival,lunar,local,Hanoi,2020
+2020-02-03,2020-02-03,Long Tong Festival (Phu Thong),lunar,local,Bac Kan,2020
+2020-02-03,2020-02-03,Yen Tu Festival Opening,lunar,local,Quang Ninh,2020
+2020-02-05,2020-02-05,Boi Khe Pagoda Festival,lunar,local,Hanoi,2020
+2020-02-05,2020-02-07,Lim Festival,lunar,local,Bac Ninh,2020
+2020-02-07,2020-02-07,Ba Chua Kho (Lady of the Treasury) Festival,lunar,local,Bac Ninh,2020
+2020-02-07,2020-02-09,Hoi An Lantern Festival (Tet Nguyen Tieu),lunar,local,Quang Nam,2020
+2020-02-07,2020-02-08,Tran Temple Royal Seal Opening Ceremony,lunar,local,Nam Dinh,2020
+2020-02-08,2020-02-08,Cheo Tau Singing Festival (Dan Phuong),lunar,local,Hanoi,2020
+2020-02-08,2020-02-08,Lantern Festival (Tet Nguyen Tieu),lunar,national,Vietnam,2020
+2020-02-08,2020-02-08,Nhi - Tam Thanh Pagoda Festival,lunar,local,Lang Son,2020
+2020-02-08,2020-02-08,Tet Nguyen Tieu of the Chinese Community,lunar,local,Ho Chi Minh City,2020
+2020-02-08,2020-02-09,Va Temple Festival (Son Tay),lunar,local,Hanoi,2020
+2020-02-14,2020-02-14,Valentine's Day,solar,national,Vietnam,2020
+2020-02-23,2020-02-28,Truc Temple Festival & Dam Singing,lunar,local,Ha Nam,2020
+2020-02-24,2020-02-24,Tram Pagoda Festival,lunar,local,Hanoi,2020
+2020-02-27,2020-02-27,Vietnamese Doctors' Day,solar,national,Vietnam,2020
+2020-03-03,2020-03-05,Dinh Co Festival (Long Hai),lunar,local,Ba Ria - Vung Tau,2020
+2020-03-07,2020-03-09,Nghinh Ong Song Doc Whale Festival,lunar,local,Ca Mau,2020
+2020-03-08,2020-03-08,International Women's Day,solar,national,Vietnam,2020
+2020-03-09,2020-03-13,"Khao Le The Linh (Hoang Sa Soldiers) Ceremony, Ly Son",lunar,local,Quang Ngai,2020
+2020-03-10,2020-03-10,Thang Tam Festival (Vung Tau),lunar,local,Ba Ria - Vung Tau,2020
+2020-03-20,2020-03-20,International Day of Happiness,solar,national,Vietnam,2020
+2020-03-24,2020-04-02,Phu Day Festival,lunar,local,Nam Dinh,2020
+2020-03-26,2020-03-26,Cold Food Festival / Thanh Minh (Tet Han Thuc),lunar,national,Vietnam,2020
+2020-03-26,2020-03-26,Ho Chi Minh Communist Youth Union Foundation Day,solar,national,Vietnam,2020
+2020-03-28,2020-03-29,Tay Phuong Pagoda Festival (Thach That),lunar,local,Hanoi,2020
+2020-03-28,2020-03-30,Thay Pagoda Festival (Quoc Oai),lunar,local,Hanoi,2020
+2020-03-29,2020-03-29,Binh Da Festival (Thanh Oai),lunar,local,Hanoi,2020
+2020-03-29,2020-03-29,Hat Mon Temple Festival (Phuc Tho),lunar,local,Hanoi,2020
+2020-03-31,2020-03-31,Hai Ba Trung Festival,lunar,local,Ho Chi Minh City,2020
+2020-04-01,2020-04-01,April Fools' Day,solar,national,Vietnam,2020
+2020-04-01,2020-04-03,Hoa Lu Festival (Truong Yen),lunar,local,Ninh Binh,2020
+2020-04-02,2020-04-02,Hung Kings Commemoration Day,lunar,national,Vietnam,2020
+2020-04-08,2020-04-08,Khe Hoi Village Festival (Thuong Tin),lunar,local,Hanoi,2020
+2020-04-11,2020-04-13,Doi (Long Doi) Pagoda Festival,lunar,local,Ha Nam,2020
+2020-04-12,2020-04-15,Ponagar Tower Festival,lunar,local,Khanh Hoa,2020
+2020-04-13,2020-04-15,Chol Chnam Thmay (Khmer New Year),solar,local,Mekong Delta (Khmer),2020
+2020-04-15,2020-04-15,Thien Hau Lady Festival,lunar,local,Ho Chi Minh City,2020
+2020-04-30,2020-05-01,Giong Festival at Phu Dong (Gia Lam),lunar,local,Hanoi,2020
+2020-04-30,2020-04-30,Reunification Day (Liberation of the South),solar,national,Vietnam,2020
+2020-05-01,2020-05-01,International Workers' Day,solar,national,Vietnam,2020
+2020-05-07,2020-05-07,Buddha's Birthday (Vesak),lunar,national,Vietnam,2020
+2020-05-07,2020-05-07,Dien Bien Phu Victory Day,solar,national,Vietnam,2020
+2020-05-13,2020-05-13,Mother's Day,solar,national,Vietnam,2020
+2020-05-14,2020-05-19,"Ba Chua Xu Festival, Sam Mountain",lunar,local,An Giang,2020
+2020-05-19,2020-05-19,President Ho Chi Minh's Birthday,solar,national,Vietnam,2020
+2020-06-01,2020-06-01,International Children's Day,solar,national,Vietnam,2020
+2020-06-17,2020-06-17,Father's Day,solar,national,Vietnam,2020
+2020-06-21,2020-06-21,Vietnam Revolutionary Press Day,solar,national,Vietnam,2020
+2020-06-25,2020-06-25,Mid-Year Festival (Tet Doan Ngo),lunar,national,Vietnam,2020
+2020-06-28,2020-06-28,Vietnam Family Day,solar,national,Vietnam,2020
+2020-06-30,2020-07-02,My Long Sea Worship Festival,lunar,local,Tra Vinh,2020
+2020-07-11,2020-07-11,World Population Day,solar,national,Vietnam,2020
+2020-07-27,2020-07-27,War Invalids and Martyrs' Day,solar,national,Vietnam,2020
+2020-07-28,2020-07-28,Vietnam Trade Union Foundation Day,solar,national,Vietnam,2020
+2020-08-07,2020-08-14,Lanh Giang Temple Festival,lunar,local,Ha Nam,2020
+2020-08-19,2020-08-19,August Revolution Commemoration Day,solar,national,Vietnam,2020
+2020-08-20,2020-08-20,Truong Dinh Memorial Day,solar,local,Tien Giang,2020
+2020-08-25,2020-08-25,That Tich (Vietnamese Valentine),lunar,national,Vietnam,2020
+2020-09-02,2020-09-02,National Day (Independence Day),solar,national,Vietnam,2020
+2020-09-02,2020-09-02,Vu Lan / Ghost Festival,lunar,national,Vietnam,2020
+2020-09-10,2020-09-10,Vietnam Fatherland Front Foundation Day,solar,national,Vietnam,2020
+2020-10-01,2020-10-01,International Day of Older Persons,solar,national,Vietnam,2020
+2020-10-01,2020-10-01,Mid-Autumn Festival,lunar,national,Vietnam,2020
+2020-10-01,2020-10-02,Nghinh Ong Can Gio Whale Festival,lunar,local,Ho Chi Minh City,2020
+2020-10-01,2020-10-06,Tran Hung Dao Festival (Tran Temple),lunar,local,Nam Dinh,2020
+2020-10-06,2020-10-06,Tran Thuong Temple Festival,lunar,local,Ha Nam,2020
+2020-10-10,2020-10-10,Liberation of the Capital (Hanoi) Day,solar,national,Vietnam,2020
+2020-10-12,2020-10-14,Nguyen Trung Truc Festival,lunar,local,Kien Giang,2020
+2020-10-13,2020-10-13,Kieu Ky Village Festival (Gia Lam),lunar,local,Hanoi,2020
+2020-10-13,2020-10-13,Vietnam Entrepreneurs' Day,solar,national,Vietnam,2020
+2020-10-20,2020-10-20,Vietnamese Women's Day,solar,national,Vietnam,2020
+2020-10-25,2020-10-25,Double Ninth Festival (Tet Trung Cuu),lunar,national,Vietnam,2020
+2020-10-28,2020-10-31,Keo Hanh Thien Pagoda Festival,lunar,local,Nam Dinh,2020
+2020-10-31,2020-11-05,Co Le Pagoda Festival (Truc Ninh),lunar,local,Nam Dinh,2020
+2020-10-31,2020-10-31,Halloween,solar,national,Vietnam,2020
+2020-11-09,2020-11-09,Vietnam Law Day,solar,national,Vietnam,2020
+2020-11-19,2020-11-19,International Men's Day,solar,national,Vietnam,2020
+2020-11-20,2020-11-20,Vietnamese Teachers' Day,solar,national,Vietnam,2020
+2020-11-23,2020-11-23,Southern Uprising (Nam Ky Khoi Nghia) Day,solar,local,Tien Giang,2020
+2020-11-23,2020-11-23,Vietnam Red Cross Foundation Day,solar,national,Vietnam,2020
+2020-11-24,2020-11-24,Double Tenth Festival (Tet Trung Thap),lunar,national,Vietnam,2020
+2020-11-29,2020-11-29,Lower Element Festival (Tet Ha Nguyen),lunar,national,Vietnam,2020
+2020-11-29,2020-11-29,Ok Om Bok Festival (Khmer),lunar,local,Mekong Delta (Khmer),2020
+2020-12-01,2020-12-01,World AIDS Day,solar,national,Vietnam,2020
+2020-12-19,2020-12-19,National Resistance Day,solar,national,Vietnam,2020
+2020-12-22,2020-12-22,Vietnam People's Army Foundation Day,solar,national,Vietnam,2020
+2020-12-24,2020-12-24,Christmas,solar,national,Vietnam,2020
+2021-01-01,2021-01-01,New Year's Day,solar,national,Vietnam,2021
+2021-01-02,2021-01-02,Ap Bac Victory Commemoration,solar,local,Tien Giang,2021
+2021-01-09,2021-01-09,Vietnamese Students' Day,solar,national,Vietnam,2021
+2021-01-20,2021-01-20,Rach Gam - Xoai Mut Victory Commemoration,solar,local,Tien Giang,2021
+2021-02-03,2021-02-03,Communist Party of Vietnam Foundation Day,solar,national,Vietnam,2021
+2021-02-04,2021-02-04,Kitchen Gods Day (Ong Tao),lunar,national,Vietnam,2021
+2021-02-12,2021-02-16,Lunar New Year (Tet),lunar,national,Vietnam,2021
+2021-02-14,2021-02-14,Valentine's Day,solar,national,Vietnam,2021
+2021-02-15,2021-02-15,Ba Den Mountain Festival,lunar,local,Tay Ninh,2021
+2021-02-15,2021-02-16,Dong Da - Tay Son Festival,lunar,local,Binh Dinh,2021
+2021-02-15,2021-02-15,Tram Gian Pagoda Festival,lunar,local,Hanoi,2021
+2021-02-16,2021-02-16,Ba Be Festival,lunar,local,Bac Kan,2021
+2021-02-16,2021-02-16,Lieu Doi Wrestling Festival,lunar,local,Ha Nam,2021
+2021-02-17,2021-02-17,Bai Dinh Pagoda Opening Festival,lunar,local,Ninh Binh,2021
+2021-02-17,2021-02-17,Giong Festival at Soc Temple,lunar,local,Hanoi,2021
+2021-02-17,2021-02-19,Hai Ba Trung Temple Festival (Me Linh),lunar,local,Hanoi,2021
+2021-02-17,2021-02-17,Huong Pagoda (Perfume Pagoda) Opening Festival,lunar,local,Hanoi,2021
+2021-02-18,2021-02-18,Long Tong (Going-to-Field) Festival,lunar,local,Ha Giang,2021
+2021-02-19,2021-02-19,Giong Festival at Bo Dau,lunar,local,Hanoi,2021
+2021-02-20,2021-02-20,Jade Emperor Pagoda Festival,lunar,local,Ho Chi Minh City,2021
+2021-02-21,2021-02-21,Dong Dang Festival,lunar,local,Lang Son,2021
+2021-02-21,2021-02-21,Ha Thai Village Festival,lunar,local,Hanoi,2021
+2021-02-21,2021-02-21,Long Tong Festival (Phu Thong),lunar,local,Bac Kan,2021
+2021-02-21,2021-02-21,Yen Tu Festival Opening,lunar,local,Quang Ninh,2021
+2021-02-23,2021-02-23,Boi Khe Pagoda Festival,lunar,local,Hanoi,2021
+2021-02-23,2021-02-25,Lim Festival,lunar,local,Bac Ninh,2021
+2021-02-25,2021-02-25,Ba Chua Kho (Lady of the Treasury) Festival,lunar,local,Bac Ninh,2021
+2021-02-25,2021-02-27,Hoi An Lantern Festival (Tet Nguyen Tieu),lunar,local,Quang Nam,2021
+2021-02-25,2021-02-26,Tran Temple Royal Seal Opening Ceremony,lunar,local,Nam Dinh,2021
+2021-02-26,2021-02-26,Cheo Tau Singing Festival (Dan Phuong),lunar,local,Hanoi,2021
+2021-02-26,2021-02-26,Lantern Festival (Tet Nguyen Tieu),lunar,national,Vietnam,2021
+2021-02-26,2021-02-26,Nhi - Tam Thanh Pagoda Festival,lunar,local,Lang Son,2021
+2021-02-26,2021-02-26,Tet Nguyen Tieu of the Chinese Community,lunar,local,Ho Chi Minh City,2021
+2021-02-26,2021-02-27,Va Temple Festival (Son Tay),lunar,local,Hanoi,2021
+2021-02-27,2021-02-27,Vietnamese Doctors' Day,solar,national,Vietnam,2021
+2021-03-08,2021-03-08,International Women's Day,solar,national,Vietnam,2021
+2021-03-13,2021-03-18,Truc Temple Festival & Dam Singing,lunar,local,Ha Nam,2021
+2021-03-14,2021-03-14,Tram Pagoda Festival,lunar,local,Hanoi,2021
+2021-03-20,2021-03-20,International Day of Happiness,solar,national,Vietnam,2021
+2021-03-22,2021-03-24,Dinh Co Festival (Long Hai),lunar,local,Ba Ria - Vung Tau,2021
+2021-03-26,2021-03-26,Ho Chi Minh Communist Youth Union Foundation Day,solar,national,Vietnam,2021
+2021-03-26,2021-03-28,Nghinh Ong Song Doc Whale Festival,lunar,local,Ca Mau,2021
+2021-03-28,2021-04-01,"Khao Le The Linh (Hoang Sa Soldiers) Ceremony, Ly Son",lunar,local,Quang Ngai,2021
+2021-03-29,2021-03-29,Thang Tam Festival (Vung Tau),lunar,local,Ba Ria - Vung Tau,2021
+2021-04-01,2021-04-01,April Fools' Day,solar,national,Vietnam,2021
+2021-04-12,2021-04-21,Phu Day Festival,lunar,local,Nam Dinh,2021
+2021-04-13,2021-04-15,Chol Chnam Thmay (Khmer New Year),solar,local,Mekong Delta (Khmer),2021
+2021-04-14,2021-04-14,Cold Food Festival / Thanh Minh (Tet Han Thuc),lunar,national,Vietnam,2021
+2021-04-16,2021-04-17,Tay Phuong Pagoda Festival (Thach That),lunar,local,Hanoi,2021
+2021-04-16,2021-04-18,Thay Pagoda Festival (Quoc Oai),lunar,local,Hanoi,2021
+2021-04-17,2021-04-17,Binh Da Festival (Thanh Oai),lunar,local,Hanoi,2021
+2021-04-17,2021-04-17,Hat Mon Temple Festival (Phuc Tho),lunar,local,Hanoi,2021
+2021-04-19,2021-04-19,Hai Ba Trung Festival,lunar,local,Ho Chi Minh City,2021
+2021-04-20,2021-04-22,Hoa Lu Festival (Truong Yen),lunar,local,Ninh Binh,2021
+2021-04-21,2021-04-21,Hung Kings Commemoration Day,lunar,national,Vietnam,2021
+2021-04-27,2021-04-27,Khe Hoi Village Festival (Thuong Tin),lunar,local,Hanoi,2021
+2021-04-30,2021-05-02,Doi (Long Doi) Pagoda Festival,lunar,local,Ha Nam,2021
+2021-04-30,2021-04-30,Reunification Day (Liberation of the South),solar,national,Vietnam,2021
+2021-05-01,2021-05-01,International Workers' Day,solar,national,Vietnam,2021
+2021-05-01,2021-05-04,Ponagar Tower Festival,lunar,local,Khanh Hoa,2021
+2021-05-04,2021-05-04,Thien Hau Lady Festival,lunar,local,Ho Chi Minh City,2021
+2021-05-07,2021-05-07,Dien Bien Phu Victory Day,solar,national,Vietnam,2021
+2021-05-13,2021-05-13,Mother's Day,solar,national,Vietnam,2021
+2021-05-19,2021-05-20,Giong Festival at Phu Dong (Gia Lam),lunar,local,Hanoi,2021
+2021-05-19,2021-05-19,President Ho Chi Minh's Birthday,solar,national,Vietnam,2021
+2021-05-26,2021-05-26,Buddha's Birthday (Vesak),lunar,national,Vietnam,2021
+2021-06-01,2021-06-01,International Children's Day,solar,national,Vietnam,2021
+2021-06-02,2021-06-07,"Ba Chua Xu Festival, Sam Mountain",lunar,local,An Giang,2021
+2021-06-14,2021-06-14,Mid-Year Festival (Tet Doan Ngo),lunar,national,Vietnam,2021
+2021-06-17,2021-06-17,Father's Day,solar,national,Vietnam,2021
+2021-06-19,2021-06-21,My Long Sea Worship Festival,lunar,local,Tra Vinh,2021
+2021-06-21,2021-06-21,Vietnam Revolutionary Press Day,solar,national,Vietnam,2021
+2021-06-28,2021-06-28,Vietnam Family Day,solar,national,Vietnam,2021
+2021-07-11,2021-07-11,World Population Day,solar,national,Vietnam,2021
+2021-07-27,2021-08-03,Lanh Giang Temple Festival,lunar,local,Ha Nam,2021
+2021-07-27,2021-07-27,War Invalids and Martyrs' Day,solar,national,Vietnam,2021
+2021-07-28,2021-07-28,Vietnam Trade Union Foundation Day,solar,national,Vietnam,2021
+2021-08-14,2021-08-14,That Tich (Vietnamese Valentine),lunar,national,Vietnam,2021
+2021-08-19,2021-08-19,August Revolution Commemoration Day,solar,national,Vietnam,2021
+2021-08-20,2021-08-20,Truong Dinh Memorial Day,solar,local,Tien Giang,2021
+2021-08-22,2021-08-22,Vu Lan / Ghost Festival,lunar,national,Vietnam,2021
+2021-09-02,2021-09-02,National Day (Independence Day),solar,national,Vietnam,2021
+2021-09-10,2021-09-10,Vietnam Fatherland Front Foundation Day,solar,national,Vietnam,2021
+2021-09-21,2021-09-21,Mid-Autumn Festival,lunar,national,Vietnam,2021
+2021-09-21,2021-09-22,Nghinh Ong Can Gio Whale Festival,lunar,local,Ho Chi Minh City,2021
+2021-09-21,2021-09-26,Tran Hung Dao Festival (Tran Temple),lunar,local,Nam Dinh,2021
+2021-09-26,2021-09-26,Tran Thuong Temple Festival,lunar,local,Ha Nam,2021
+2021-10-01,2021-10-01,International Day of Older Persons,solar,national,Vietnam,2021
+2021-10-02,2021-10-04,Nguyen Trung Truc Festival,lunar,local,Kien Giang,2021
+2021-10-03,2021-10-03,Kieu Ky Village Festival (Gia Lam),lunar,local,Hanoi,2021
+2021-10-10,2021-10-10,Liberation of the Capital (Hanoi) Day,solar,national,Vietnam,2021
+2021-10-13,2021-10-13,Vietnam Entrepreneurs' Day,solar,national,Vietnam,2021
+2021-10-14,2021-10-14,Double Ninth Festival (Tet Trung Cuu),lunar,national,Vietnam,2021
+2021-10-17,2021-10-20,Keo Hanh Thien Pagoda Festival,lunar,local,Nam Dinh,2021
+2021-10-20,2021-10-25,Co Le Pagoda Festival (Truc Ninh),lunar,local,Nam Dinh,2021
+2021-10-20,2021-10-20,Vietnamese Women's Day,solar,national,Vietnam,2021
+2021-10-31,2021-10-31,Halloween,solar,national,Vietnam,2021
+2021-11-09,2021-11-09,Vietnam Law Day,solar,national,Vietnam,2021
+2021-11-14,2021-11-14,Double Tenth Festival (Tet Trung Thap),lunar,national,Vietnam,2021
+2021-11-19,2021-11-19,International Men's Day,solar,national,Vietnam,2021
+2021-11-19,2021-11-19,Lower Element Festival (Tet Ha Nguyen),lunar,national,Vietnam,2021
+2021-11-19,2021-11-19,Ok Om Bok Festival (Khmer),lunar,local,Mekong Delta (Khmer),2021
+2021-11-20,2021-11-20,Vietnamese Teachers' Day,solar,national,Vietnam,2021
+2021-11-23,2021-11-23,Southern Uprising (Nam Ky Khoi Nghia) Day,solar,local,Tien Giang,2021
+2021-11-23,2021-11-23,Vietnam Red Cross Foundation Day,solar,national,Vietnam,2021
+2021-12-01,2021-12-01,World AIDS Day,solar,national,Vietnam,2021
+2021-12-19,2021-12-19,National Resistance Day,solar,national,Vietnam,2021
+2021-12-22,2021-12-22,Vietnam People's Army Foundation Day,solar,national,Vietnam,2021
+2021-12-24,2021-12-24,Christmas,solar,national,Vietnam,2021
+2022-01-01,2022-01-01,New Year's Day,solar,national,Vietnam,2022
+2022-01-02,2022-01-02,Ap Bac Victory Commemoration,solar,local,Tien Giang,2022
+2022-01-09,2022-01-09,Vietnamese Students' Day,solar,national,Vietnam,2022
+2022-01-20,2022-01-20,Rach Gam - Xoai Mut Victory Commemoration,solar,local,Tien Giang,2022
+2022-01-25,2022-01-25,Kitchen Gods Day (Ong Tao),lunar,national,Vietnam,2022
+2022-02-01,2022-02-05,Lunar New Year (Tet),lunar,national,Vietnam,2022
+2022-02-03,2022-02-03,Communist Party of Vietnam Foundation Day,solar,national,Vietnam,2022
+2022-02-04,2022-02-04,Ba Den Mountain Festival,lunar,local,Tay Ninh,2022
+2022-02-04,2022-02-05,Dong Da - Tay Son Festival,lunar,local,Binh Dinh,2022
+2022-02-04,2022-02-04,Tram Gian Pagoda Festival,lunar,local,Hanoi,2022
+2022-02-05,2022-02-05,Ba Be Festival,lunar,local,Bac Kan,2022
+2022-02-05,2022-02-05,Lieu Doi Wrestling Festival,lunar,local,Ha Nam,2022
+2022-02-06,2022-02-06,Bai Dinh Pagoda Opening Festival,lunar,local,Ninh Binh,2022
+2022-02-06,2022-02-06,Giong Festival at Soc Temple,lunar,local,Hanoi,2022
+2022-02-06,2022-02-08,Hai Ba Trung Temple Festival (Me Linh),lunar,local,Hanoi,2022
+2022-02-06,2022-02-06,Huong Pagoda (Perfume Pagoda) Opening Festival,lunar,local,Hanoi,2022
+2022-02-07,2022-02-07,Long Tong (Going-to-Field) Festival,lunar,local,Ha Giang,2022
+2022-02-08,2022-02-08,Giong Festival at Bo Dau,lunar,local,Hanoi,2022
+2022-02-09,2022-02-09,Jade Emperor Pagoda Festival,lunar,local,Ho Chi Minh City,2022
+2022-02-10,2022-02-10,Dong Dang Festival,lunar,local,Lang Son,2022
+2022-02-10,2022-02-10,Ha Thai Village Festival,lunar,local,Hanoi,2022
+2022-02-10,2022-02-10,Long Tong Festival (Phu Thong),lunar,local,Bac Kan,2022
+2022-02-10,2022-02-10,Yen Tu Festival Opening,lunar,local,Quang Ninh,2022
+2022-02-12,2022-02-12,Boi Khe Pagoda Festival,lunar,local,Hanoi,2022
+2022-02-12,2022-02-14,Lim Festival,lunar,local,Bac Ninh,2022
+2022-02-14,2022-02-14,Ba Chua Kho (Lady of the Treasury) Festival,lunar,local,Bac Ninh,2022
+2022-02-14,2022-02-16,Hoi An Lantern Festival (Tet Nguyen Tieu),lunar,local,Quang Nam,2022
+2022-02-14,2022-02-15,Tran Temple Royal Seal Opening Ceremony,lunar,local,Nam Dinh,2022
+2022-02-14,2022-02-14,Valentine's Day,solar,national,Vietnam,2022
+2022-02-15,2022-02-15,Cheo Tau Singing Festival (Dan Phuong),lunar,local,Hanoi,2022
+2022-02-15,2022-02-15,Lantern Festival (Tet Nguyen Tieu),lunar,national,Vietnam,2022
+2022-02-15,2022-02-15,Nhi - Tam Thanh Pagoda Festival,lunar,local,Lang Son,2022
+2022-02-15,2022-02-15,Tet Nguyen Tieu of the Chinese Community,lunar,local,Ho Chi Minh City,2022
+2022-02-15,2022-02-16,Va Temple Festival (Son Tay),lunar,local,Hanoi,2022
+2022-02-27,2022-02-27,Vietnamese Doctors' Day,solar,national,Vietnam,2022
+2022-03-03,2022-03-08,Truc Temple Festival & Dam Singing,lunar,local,Ha Nam,2022
+2022-03-04,2022-03-04,Tram Pagoda Festival,lunar,local,Hanoi,2022
+2022-03-08,2022-03-08,International Women's Day,solar,national,Vietnam,2022
+2022-03-12,2022-03-14,Dinh Co Festival (Long Hai),lunar,local,Ba Ria - Vung Tau,2022
+2022-03-16,2022-03-18,Nghinh Ong Song Doc Whale Festival,lunar,local,Ca Mau,2022
+2022-03-18,2022-03-22,"Khao Le The Linh (Hoang Sa Soldiers) Ceremony, Ly Son",lunar,local,Quang Ngai,2022
+2022-03-19,2022-03-19,Thang Tam Festival (Vung Tau),lunar,local,Ba Ria - Vung Tau,2022
+2022-03-20,2022-03-20,International Day of Happiness,solar,national,Vietnam,2022
+2022-03-26,2022-03-26,Ho Chi Minh Communist Youth Union Foundation Day,solar,national,Vietnam,2022
+2022-04-01,2022-04-01,April Fools' Day,solar,national,Vietnam,2022
+2022-04-01,2022-04-10,Phu Day Festival,lunar,local,Nam Dinh,2022
+2022-04-03,2022-04-03,Cold Food Festival / Thanh Minh (Tet Han Thuc),lunar,national,Vietnam,2022
+2022-04-05,2022-04-06,Tay Phuong Pagoda Festival (Thach That),lunar,local,Hanoi,2022
+2022-04-05,2022-04-07,Thay Pagoda Festival (Quoc Oai),lunar,local,Hanoi,2022
+2022-04-06,2022-04-06,Binh Da Festival (Thanh Oai),lunar,local,Hanoi,2022
+2022-04-06,2022-04-06,Hat Mon Temple Festival (Phuc Tho),lunar,local,Hanoi,2022
+2022-04-08,2022-04-08,Hai Ba Trung Festival,lunar,local,Ho Chi Minh City,2022
+2022-04-09,2022-04-11,Hoa Lu Festival (Truong Yen),lunar,local,Ninh Binh,2022
+2022-04-10,2022-04-10,Hung Kings Commemoration Day,lunar,national,Vietnam,2022
+2022-04-13,2022-04-15,Chol Chnam Thmay (Khmer New Year),solar,local,Mekong Delta (Khmer),2022
+2022-04-16,2022-04-16,Khe Hoi Village Festival (Thuong Tin),lunar,local,Hanoi,2022
+2022-04-19,2022-04-21,Doi (Long Doi) Pagoda Festival,lunar,local,Ha Nam,2022
+2022-04-20,2022-04-23,Ponagar Tower Festival,lunar,local,Khanh Hoa,2022
+2022-04-23,2022-04-23,Thien Hau Lady Festival,lunar,local,Ho Chi Minh City,2022
+2022-04-30,2022-04-30,Reunification Day (Liberation of the South),solar,national,Vietnam,2022
+2022-05-01,2022-05-01,International Workers' Day,solar,national,Vietnam,2022
+2022-05-07,2022-05-07,Dien Bien Phu Victory Day,solar,national,Vietnam,2022
+2022-05-08,2022-05-09,Giong Festival at Phu Dong (Gia Lam),lunar,local,Hanoi,2022
+2022-05-13,2022-05-13,Mother's Day,solar,national,Vietnam,2022
+2022-05-15,2022-05-15,Buddha's Birthday (Vesak),lunar,national,Vietnam,2022
+2022-05-19,2022-05-19,President Ho Chi Minh's Birthday,solar,national,Vietnam,2022
+2022-05-22,2022-05-27,"Ba Chua Xu Festival, Sam Mountain",lunar,local,An Giang,2022
+2022-06-01,2022-06-01,International Children's Day,solar,national,Vietnam,2022
+2022-06-03,2022-06-03,Mid-Year Festival (Tet Doan Ngo),lunar,national,Vietnam,2022
+2022-06-08,2022-06-10,My Long Sea Worship Festival,lunar,local,Tra Vinh,2022
+2022-06-17,2022-06-17,Father's Day,solar,national,Vietnam,2022
+2022-06-21,2022-06-21,Vietnam Revolutionary Press Day,solar,national,Vietnam,2022
+2022-06-28,2022-06-28,Vietnam Family Day,solar,national,Vietnam,2022
+2022-07-11,2022-07-11,World Population Day,solar,national,Vietnam,2022
+2022-07-16,2022-07-23,Lanh Giang Temple Festival,lunar,local,Ha Nam,2022
+2022-07-27,2022-07-27,War Invalids and Martyrs' Day,solar,national,Vietnam,2022
+2022-07-28,2022-07-28,Vietnam Trade Union Foundation Day,solar,national,Vietnam,2022
+2022-08-04,2022-08-04,That Tich (Vietnamese Valentine),lunar,national,Vietnam,2022
+2022-08-12,2022-08-12,Vu Lan / Ghost Festival,lunar,national,Vietnam,2022
+2022-08-19,2022-08-19,August Revolution Commemoration Day,solar,national,Vietnam,2022
+2022-08-20,2022-08-20,Truong Dinh Memorial Day,solar,local,Tien Giang,2022
+2022-09-02,2022-09-02,National Day (Independence Day),solar,national,Vietnam,2022
+2022-09-10,2022-09-10,Mid-Autumn Festival,lunar,national,Vietnam,2022
+2022-09-10,2022-09-11,Nghinh Ong Can Gio Whale Festival,lunar,local,Ho Chi Minh City,2022
+2022-09-10,2022-09-15,Tran Hung Dao Festival (Tran Temple),lunar,local,Nam Dinh,2022
+2022-09-10,2022-09-10,Vietnam Fatherland Front Foundation Day,solar,national,Vietnam,2022
+2022-09-15,2022-09-15,Tran Thuong Temple Festival,lunar,local,Ha Nam,2022
+2022-09-21,2022-09-23,Nguyen Trung Truc Festival,lunar,local,Kien Giang,2022
+2022-09-22,2022-09-22,Kieu Ky Village Festival (Gia Lam),lunar,local,Hanoi,2022
+2022-10-01,2022-10-01,International Day of Older Persons,solar,national,Vietnam,2022
+2022-10-04,2022-10-04,Double Ninth Festival (Tet Trung Cuu),lunar,national,Vietnam,2022
+2022-10-07,2022-10-10,Keo Hanh Thien Pagoda Festival,lunar,local,Nam Dinh,2022
+2022-10-10,2022-10-15,Co Le Pagoda Festival (Truc Ninh),lunar,local,Nam Dinh,2022
+2022-10-10,2022-10-10,Liberation of the Capital (Hanoi) Day,solar,national,Vietnam,2022
+2022-10-13,2022-10-13,Vietnam Entrepreneurs' Day,solar,national,Vietnam,2022
+2022-10-20,2022-10-20,Vietnamese Women's Day,solar,national,Vietnam,2022
+2022-10-31,2022-10-31,Halloween,solar,national,Vietnam,2022
+2022-11-03,2022-11-03,Double Tenth Festival (Tet Trung Thap),lunar,national,Vietnam,2022
+2022-11-08,2022-11-08,Lower Element Festival (Tet Ha Nguyen),lunar,national,Vietnam,2022
+2022-11-08,2022-11-08,Ok Om Bok Festival (Khmer),lunar,local,Mekong Delta (Khmer),2022
+2022-11-09,2022-11-09,Vietnam Law Day,solar,national,Vietnam,2022
+2022-11-19,2022-11-19,International Men's Day,solar,national,Vietnam,2022
+2022-11-20,2022-11-20,Vietnamese Teachers' Day,solar,national,Vietnam,2022
+2022-11-23,2022-11-23,Southern Uprising (Nam Ky Khoi Nghia) Day,solar,local,Tien Giang,2022
+2022-11-23,2022-11-23,Vietnam Red Cross Foundation Day,solar,national,Vietnam,2022
+2022-12-01,2022-12-01,World AIDS Day,solar,national,Vietnam,2022
+2022-12-19,2022-12-19,National Resistance Day,solar,national,Vietnam,2022
+2022-12-22,2022-12-22,Vietnam People's Army Foundation Day,solar,national,Vietnam,2022
+2022-12-24,2022-12-24,Christmas,solar,national,Vietnam,2022
+2023-01-01,2023-01-01,New Year's Day,solar,national,Vietnam,2023
+2023-01-02,2023-01-02,Ap Bac Victory Commemoration,solar,local,Tien Giang,2023
+2023-01-09,2023-01-09,Vietnamese Students' Day,solar,national,Vietnam,2023
+2023-01-14,2023-01-14,Kitchen Gods Day (Ong Tao),lunar,national,Vietnam,2023
+2023-01-20,2023-01-20,Rach Gam - Xoai Mut Victory Commemoration,solar,local,Tien Giang,2023
+2023-01-22,2023-01-26,Lunar New Year (Tet),lunar,national,Vietnam,2023
+2023-01-25,2023-01-25,Ba Den Mountain Festival,lunar,local,Tay Ninh,2023
+2023-01-25,2023-01-26,Dong Da - Tay Son Festival,lunar,local,Binh Dinh,2023
+2023-01-25,2023-01-25,Tram Gian Pagoda Festival,lunar,local,Hanoi,2023
+2023-01-26,2023-01-26,Ba Be Festival,lunar,local,Bac Kan,2023
+2023-01-26,2023-01-26,Lieu Doi Wrestling Festival,lunar,local,Ha Nam,2023
+2023-01-27,2023-01-27,Bai Dinh Pagoda Opening Festival,lunar,local,Ninh Binh,2023
+2023-01-27,2023-01-27,Giong Festival at Soc Temple,lunar,local,Hanoi,2023
+2023-01-27,2023-01-29,Hai Ba Trung Temple Festival (Me Linh),lunar,local,Hanoi,2023
+2023-01-27,2023-01-27,Huong Pagoda (Perfume Pagoda) Opening Festival,lunar,local,Hanoi,2023
+2023-01-28,2023-01-28,Long Tong (Going-to-Field) Festival,lunar,local,Ha Giang,2023
+2023-01-29,2023-01-29,Giong Festival at Bo Dau,lunar,local,Hanoi,2023
+2023-01-30,2023-01-30,Jade Emperor Pagoda Festival,lunar,local,Ho Chi Minh City,2023
+2023-01-31,2023-01-31,Dong Dang Festival,lunar,local,Lang Son,2023
+2023-01-31,2023-01-31,Ha Thai Village Festival,lunar,local,Hanoi,2023
+2023-01-31,2023-01-31,Long Tong Festival (Phu Thong),lunar,local,Bac Kan,2023
+2023-01-31,2023-01-31,Yen Tu Festival Opening,lunar,local,Quang Ninh,2023
+2023-02-02,2023-02-02,Boi Khe Pagoda Festival,lunar,local,Hanoi,2023
+2023-02-02,2023-02-04,Lim Festival,lunar,local,Bac Ninh,2023
+2023-02-03,2023-02-03,Communist Party of Vietnam Foundation Day,solar,national,Vietnam,2023
+2023-02-04,2023-02-04,Ba Chua Kho (Lady of the Treasury) Festival,lunar,local,Bac Ninh,2023
+2023-02-04,2023-02-06,Hoi An Lantern Festival (Tet Nguyen Tieu),lunar,local,Quang Nam,2023
+2023-02-04,2023-02-05,Tran Temple Royal Seal Opening Ceremony,lunar,local,Nam Dinh,2023
+2023-02-05,2023-02-05,Cheo Tau Singing Festival (Dan Phuong),lunar,local,Hanoi,2023
+2023-02-05,2023-02-05,Lantern Festival (Tet Nguyen Tieu),lunar,national,Vietnam,2023
+2023-02-05,2023-02-05,Nhi - Tam Thanh Pagoda Festival,lunar,local,Lang Son,2023
+2023-02-05,2023-02-05,Tet Nguyen Tieu of the Chinese Community,lunar,local,Ho Chi Minh City,2023
+2023-02-05,2023-02-06,Va Temple Festival (Son Tay),lunar,local,Hanoi,2023
+2023-02-14,2023-02-14,Valentine's Day,solar,national,Vietnam,2023
+2023-02-20,2023-02-25,Truc Temple Festival & Dam Singing,lunar,local,Ha Nam,2023
+2023-02-21,2023-02-21,Tram Pagoda Festival,lunar,local,Hanoi,2023
+2023-02-27,2023-02-27,Vietnamese Doctors' Day,solar,national,Vietnam,2023
+2023-03-01,2023-03-03,Dinh Co Festival (Long Hai),lunar,local,Ba Ria - Vung Tau,2023
+2023-03-05,2023-03-07,Nghinh Ong Song Doc Whale Festival,lunar,local,Ca Mau,2023
+2023-03-07,2023-03-11,"Khao Le The Linh (Hoang Sa Soldiers) Ceremony, Ly Son",lunar,local,Quang Ngai,2023
+2023-03-08,2023-03-08,International Women's Day,solar,national,Vietnam,2023
+2023-03-08,2023-03-08,Thang Tam Festival (Vung Tau),lunar,local,Ba Ria - Vung Tau,2023
+2023-03-20,2023-03-20,International Day of Happiness,solar,national,Vietnam,2023
+2023-03-26,2023-03-26,Ho Chi Minh Communist Youth Union Foundation Day,solar,national,Vietnam,2023
+2023-04-01,2023-04-01,April Fools' Day,solar,national,Vietnam,2023
+2023-04-13,2023-04-15,Chol Chnam Thmay (Khmer New Year),solar,local,Mekong Delta (Khmer),2023
+2023-04-20,2023-04-29,Phu Day Festival,lunar,local,Nam Dinh,2023
+2023-04-22,2023-04-22,Cold Food Festival / Thanh Minh (Tet Han Thuc),lunar,national,Vietnam,2023
+2023-04-24,2023-04-25,Tay Phuong Pagoda Festival (Thach That),lunar,local,Hanoi,2023
+2023-04-24,2023-04-26,Thay Pagoda Festival (Quoc Oai),lunar,local,Hanoi,2023
+2023-04-25,2023-04-25,Binh Da Festival (Thanh Oai),lunar,local,Hanoi,2023
+2023-04-25,2023-04-25,Hat Mon Temple Festival (Phuc Tho),lunar,local,Hanoi,2023
+2023-04-27,2023-04-27,Hai Ba Trung Festival,lunar,local,Ho Chi Minh City,2023
+2023-04-28,2023-04-30,Hoa Lu Festival (Truong Yen),lunar,local,Ninh Binh,2023
+2023-04-29,2023-04-29,Hung Kings Commemoration Day,lunar,national,Vietnam,2023
+2023-04-30,2023-04-30,Reunification Day (Liberation of the South),solar,national,Vietnam,2023
+2023-05-01,2023-05-01,International Workers' Day,solar,national,Vietnam,2023
+2023-05-05,2023-05-05,Khe Hoi Village Festival (Thuong Tin),lunar,local,Hanoi,2023
+2023-05-07,2023-05-07,Dien Bien Phu Victory Day,solar,national,Vietnam,2023
+2023-05-08,2023-05-10,Doi (Long Doi) Pagoda Festival,lunar,local,Ha Nam,2023
+2023-05-09,2023-05-12,Ponagar Tower Festival,lunar,local,Khanh Hoa,2023
+2023-05-12,2023-05-12,Thien Hau Lady Festival,lunar,local,Ho Chi Minh City,2023
+2023-05-13,2023-05-13,Mother's Day,solar,national,Vietnam,2023
+2023-05-19,2023-05-19,President Ho Chi Minh's Birthday,solar,national,Vietnam,2023
+2023-05-26,2023-05-27,Giong Festival at Phu Dong (Gia Lam),lunar,local,Hanoi,2023
+2023-06-01,2023-06-01,International Children's Day,solar,national,Vietnam,2023
+2023-06-02,2023-06-02,Buddha's Birthday (Vesak),lunar,national,Vietnam,2023
+2023-06-09,2023-06-14,"Ba Chua Xu Festival, Sam Mountain",lunar,local,An Giang,2023
+2023-06-17,2023-06-17,Father's Day,solar,national,Vietnam,2023
+2023-06-21,2023-06-21,Vietnam Revolutionary Press Day,solar,national,Vietnam,2023
+2023-06-22,2023-06-22,Mid-Year Festival (Tet Doan Ngo),lunar,national,Vietnam,2023
+2023-06-27,2023-06-29,My Long Sea Worship Festival,lunar,local,Tra Vinh,2023
+2023-06-28,2023-06-28,Vietnam Family Day,solar,national,Vietnam,2023
+2023-07-11,2023-07-11,World Population Day,solar,national,Vietnam,2023
+2023-07-27,2023-07-27,War Invalids and Martyrs' Day,solar,national,Vietnam,2023
+2023-07-28,2023-07-28,Vietnam Trade Union Foundation Day,solar,national,Vietnam,2023
+2023-08-04,2023-08-11,Lanh Giang Temple Festival,lunar,local,Ha Nam,2023
+2023-08-19,2023-08-19,August Revolution Commemoration Day,solar,national,Vietnam,2023
+2023-08-20,2023-08-20,Truong Dinh Memorial Day,solar,local,Tien Giang,2023
+2023-08-22,2023-08-22,That Tich (Vietnamese Valentine),lunar,national,Vietnam,2023
+2023-08-30,2023-08-30,Vu Lan / Ghost Festival,lunar,national,Vietnam,2023
+2023-09-02,2023-09-02,National Day (Independence Day),solar,national,Vietnam,2023
+2023-09-10,2023-09-10,Vietnam Fatherland Front Foundation Day,solar,national,Vietnam,2023
+2023-09-29,2023-09-29,Mid-Autumn Festival,lunar,national,Vietnam,2023
+2023-09-29,2023-09-30,Nghinh Ong Can Gio Whale Festival,lunar,local,Ho Chi Minh City,2023
+2023-09-29,2023-10-04,Tran Hung Dao Festival (Tran Temple),lunar,local,Nam Dinh,2023
+2023-10-01,2023-10-01,International Day of Older Persons,solar,national,Vietnam,2023
+2023-10-04,2023-10-04,Tran Thuong Temple Festival,lunar,local,Ha Nam,2023
+2023-10-10,2023-10-10,Liberation of the Capital (Hanoi) Day,solar,national,Vietnam,2023
+2023-10-10,2023-10-12,Nguyen Trung Truc Festival,lunar,local,Kien Giang,2023
+2023-10-11,2023-10-11,Kieu Ky Village Festival (Gia Lam),lunar,local,Hanoi,2023
+2023-10-13,2023-10-13,Vietnam Entrepreneurs' Day,solar,national,Vietnam,2023
+2023-10-20,2023-10-20,Vietnamese Women's Day,solar,national,Vietnam,2023
+2023-10-23,2023-10-23,Double Ninth Festival (Tet Trung Cuu),lunar,national,Vietnam,2023
+2023-10-26,2023-10-29,Keo Hanh Thien Pagoda Festival,lunar,local,Nam Dinh,2023
+2023-10-29,2023-11-03,Co Le Pagoda Festival (Truc Ninh),lunar,local,Nam Dinh,2023
+2023-10-31,2023-10-31,Halloween,solar,national,Vietnam,2023
+2023-11-09,2023-11-09,Vietnam Law Day,solar,national,Vietnam,2023
+2023-11-19,2023-11-19,International Men's Day,solar,national,Vietnam,2023
+2023-11-20,2023-11-20,Vietnamese Teachers' Day,solar,national,Vietnam,2023
+2023-11-22,2023-11-22,Double Tenth Festival (Tet Trung Thap),lunar,national,Vietnam,2023
+2023-11-23,2023-11-23,Southern Uprising (Nam Ky Khoi Nghia) Day,solar,local,Tien Giang,2023
+2023-11-23,2023-11-23,Vietnam Red Cross Foundation Day,solar,national,Vietnam,2023
+2023-11-27,2023-11-27,Lower Element Festival (Tet Ha Nguyen),lunar,national,Vietnam,2023
+2023-11-27,2023-11-27,Ok Om Bok Festival (Khmer),lunar,local,Mekong Delta (Khmer),2023
+2023-12-01,2023-12-01,World AIDS Day,solar,national,Vietnam,2023
+2023-12-19,2023-12-19,National Resistance Day,solar,national,Vietnam,2023
+2023-12-22,2023-12-22,Vietnam People's Army Foundation Day,solar,national,Vietnam,2023
+2023-12-24,2023-12-24,Christmas,solar,national,Vietnam,2023
+2024-01-01,2024-01-01,New Year's Day,solar,national,Vietnam,2024
+2024-01-02,2024-01-02,Ap Bac Victory Commemoration,solar,local,Tien Giang,2024
+2024-01-09,2024-01-09,Vietnamese Students' Day,solar,national,Vietnam,2024
+2024-01-20,2024-01-20,Rach Gam - Xoai Mut Victory Commemoration,solar,local,Tien Giang,2024
+2024-02-02,2024-02-02,Kitchen Gods Day (Ong Tao),lunar,national,Vietnam,2024
+2024-02-03,2024-02-03,Communist Party of Vietnam Foundation Day,solar,national,Vietnam,2024
+2024-02-10,2024-02-14,Lunar New Year (Tet),lunar,national,Vietnam,2024
+2024-02-13,2024-02-13,Ba Den Mountain Festival,lunar,local,Tay Ninh,2024
+2024-02-13,2024-02-14,Dong Da - Tay Son Festival,lunar,local,Binh Dinh,2024
+2024-02-13,2024-02-13,Tram Gian Pagoda Festival,lunar,local,Hanoi,2024
+2024-02-14,2024-02-14,Ba Be Festival,lunar,local,Bac Kan,2024
+2024-02-14,2024-02-14,Lieu Doi Wrestling Festival,lunar,local,Ha Nam,2024
+2024-02-14,2024-02-14,Valentine's Day,solar,national,Vietnam,2024
+2024-02-15,2024-02-15,Bai Dinh Pagoda Opening Festival,lunar,local,Ninh Binh,2024
+2024-02-15,2024-02-15,Giong Festival at Soc Temple,lunar,local,Hanoi,2024
+2024-02-15,2024-02-17,Hai Ba Trung Temple Festival (Me Linh),lunar,local,Hanoi,2024
+2024-02-15,2024-02-15,Huong Pagoda (Perfume Pagoda) Opening Festival,lunar,local,Hanoi,2024
+2024-02-16,2024-02-16,Long Tong (Going-to-Field) Festival,lunar,local,Ha Giang,2024
+2024-02-17,2024-02-17,Giong Festival at Bo Dau,lunar,local,Hanoi,2024
+2024-02-18,2024-02-18,Jade Emperor Pagoda Festival,lunar,local,Ho Chi Minh City,2024
+2024-02-19,2024-02-19,Dong Dang Festival,lunar,local,Lang Son,2024
+2024-02-19,2024-02-19,Ha Thai Village Festival,lunar,local,Hanoi,2024
+2024-02-19,2024-02-19,Long Tong Festival (Phu Thong),lunar,local,Bac Kan,2024
+2024-02-19,2024-02-19,Yen Tu Festival Opening,lunar,local,Quang Ninh,2024
+2024-02-21,2024-02-21,Boi Khe Pagoda Festival,lunar,local,Hanoi,2024
+2024-02-21,2024-02-23,Lim Festival,lunar,local,Bac Ninh,2024
+2024-02-23,2024-02-23,Ba Chua Kho (Lady of the Treasury) Festival,lunar,local,Bac Ninh,2024
+2024-02-23,2024-02-25,Hoi An Lantern Festival (Tet Nguyen Tieu),lunar,local,Quang Nam,2024
+2024-02-23,2024-02-24,Tran Temple Royal Seal Opening Ceremony,lunar,local,Nam Dinh,2024
+2024-02-24,2024-02-24,Cheo Tau Singing Festival (Dan Phuong),lunar,local,Hanoi,2024
+2024-02-24,2024-02-24,Lantern Festival (Tet Nguyen Tieu),lunar,national,Vietnam,2024
+2024-02-24,2024-02-24,Nhi - Tam Thanh Pagoda Festival,lunar,local,Lang Son,2024
+2024-02-24,2024-02-24,Tet Nguyen Tieu of the Chinese Community,lunar,local,Ho Chi Minh City,2024
+2024-02-24,2024-02-25,Va Temple Festival (Son Tay),lunar,local,Hanoi,2024
+2024-02-27,2024-02-27,Vietnamese Doctors' Day,solar,national,Vietnam,2024
+2024-03-08,2024-03-08,International Women's Day,solar,national,Vietnam,2024
+2024-03-10,2024-03-15,Truc Temple Festival & Dam Singing,lunar,local,Ha Nam,2024
+2024-03-11,2024-03-11,Tram Pagoda Festival,lunar,local,Hanoi,2024
+2024-03-19,2024-03-21,Dinh Co Festival (Long Hai),lunar,local,Ba Ria - Vung Tau,2024
+2024-03-20,2024-03-20,International Day of Happiness,solar,national,Vietnam,2024
+2024-03-23,2024-03-25,Nghinh Ong Song Doc Whale Festival,lunar,local,Ca Mau,2024
+2024-03-25,2024-03-29,"Khao Le The Linh (Hoang Sa Soldiers) Ceremony, Ly Son",lunar,local,Quang Ngai,2024
+2024-03-26,2024-03-26,Ho Chi Minh Communist Youth Union Foundation Day,solar,national,Vietnam,2024
+2024-03-26,2024-03-26,Thang Tam Festival (Vung Tau),lunar,local,Ba Ria - Vung Tau,2024
+2024-04-01,2024-04-01,April Fools' Day,solar,national,Vietnam,2024
+2024-04-09,2024-04-18,Phu Day Festival,lunar,local,Nam Dinh,2024
+2024-04-11,2024-04-11,Cold Food Festival / Thanh Minh (Tet Han Thuc),lunar,national,Vietnam,2024
+2024-04-13,2024-04-15,Chol Chnam Thmay (Khmer New Year),solar,local,Mekong Delta (Khmer),2024
+2024-04-13,2024-04-14,Tay Phuong Pagoda Festival (Thach That),lunar,local,Hanoi,2024
+2024-04-13,2024-04-15,Thay Pagoda Festival (Quoc Oai),lunar,local,Hanoi,2024
+2024-04-14,2024-04-14,Binh Da Festival (Thanh Oai),lunar,local,Hanoi,2024
+2024-04-14,2024-04-14,Hat Mon Temple Festival (Phuc Tho),lunar,local,Hanoi,2024
+2024-04-16,2024-04-16,Hai Ba Trung Festival,lunar,local,Ho Chi Minh City,2024
+2024-04-17,2024-04-19,Hoa Lu Festival (Truong Yen),lunar,local,Ninh Binh,2024
+2024-04-18,2024-04-18,Hung Kings Commemoration Day,lunar,national,Vietnam,2024
+2024-04-24,2024-04-24,Khe Hoi Village Festival (Thuong Tin),lunar,local,Hanoi,2024
+2024-04-27,2024-04-29,Doi (Long Doi) Pagoda Festival,lunar,local,Ha Nam,2024
+2024-04-28,2024-05-01,Ponagar Tower Festival,lunar,local,Khanh Hoa,2024
+2024-04-30,2024-04-30,Reunification Day (Liberation of the South),solar,national,Vietnam,2024
+2024-05-01,2024-05-01,International Workers' Day,solar,national,Vietnam,2024
+2024-05-01,2024-05-01,Thien Hau Lady Festival,lunar,local,Ho Chi Minh City,2024
+2024-05-07,2024-05-07,Dien Bien Phu Victory Day,solar,national,Vietnam,2024
+2024-05-13,2024-05-13,Mother's Day,solar,national,Vietnam,2024
+2024-05-15,2024-05-16,Giong Festival at Phu Dong (Gia Lam),lunar,local,Hanoi,2024
+2024-05-19,2024-05-19,President Ho Chi Minh's Birthday,solar,national,Vietnam,2024
+2024-05-22,2024-05-22,Buddha's Birthday (Vesak),lunar,national,Vietnam,2024
+2024-05-29,2024-06-03,"Ba Chua Xu Festival, Sam Mountain",lunar,local,An Giang,2024
+2024-06-01,2024-06-01,International Children's Day,solar,national,Vietnam,2024
+2024-06-10,2024-06-10,Mid-Year Festival (Tet Doan Ngo),lunar,national,Vietnam,2024
+2024-06-15,2024-06-17,My Long Sea Worship Festival,lunar,local,Tra Vinh,2024
+2024-06-17,2024-06-17,Father's Day,solar,national,Vietnam,2024
+2024-06-21,2024-06-21,Vietnam Revolutionary Press Day,solar,national,Vietnam,2024
+2024-06-28,2024-06-28,Vietnam Family Day,solar,national,Vietnam,2024
+2024-07-11,2024-07-11,World Population Day,solar,national,Vietnam,2024
+2024-07-23,2024-07-30,Lanh Giang Temple Festival,lunar,local,Ha Nam,2024
+2024-07-27,2024-07-27,War Invalids and Martyrs' Day,solar,national,Vietnam,2024
+2024-07-28,2024-07-28,Vietnam Trade Union Foundation Day,solar,national,Vietnam,2024
+2024-08-10,2024-08-10,That Tich (Vietnamese Valentine),lunar,national,Vietnam,2024
+2024-08-18,2024-08-18,Vu Lan / Ghost Festival,lunar,national,Vietnam,2024
+2024-08-19,2024-08-19,August Revolution Commemoration Day,solar,national,Vietnam,2024
+2024-08-20,2024-08-20,Truong Dinh Memorial Day,solar,local,Tien Giang,2024
+2024-09-02,2024-09-02,National Day (Independence Day),solar,national,Vietnam,2024
+2024-09-10,2024-09-10,Vietnam Fatherland Front Foundation Day,solar,national,Vietnam,2024
+2024-09-17,2024-09-17,Mid-Autumn Festival,lunar,national,Vietnam,2024
+2024-09-17,2024-09-18,Nghinh Ong Can Gio Whale Festival,lunar,local,Ho Chi Minh City,2024
+2024-09-17,2024-09-22,Tran Hung Dao Festival (Tran Temple),lunar,local,Nam Dinh,2024
+2024-09-22,2024-09-22,Tran Thuong Temple Festival,lunar,local,Ha Nam,2024
+2024-09-28,2024-09-30,Nguyen Trung Truc Festival,lunar,local,Kien Giang,2024
+2024-09-29,2024-09-29,Kieu Ky Village Festival (Gia Lam),lunar,local,Hanoi,2024
+2024-10-01,2024-10-01,International Day of Older Persons,solar,national,Vietnam,2024
+2024-10-10,2024-10-10,Liberation of the Capital (Hanoi) Day,solar,national,Vietnam,2024
+2024-10-11,2024-10-11,Double Ninth Festival (Tet Trung Cuu),lunar,national,Vietnam,2024
+2024-10-13,2024-10-13,Vietnam Entrepreneurs' Day,solar,national,Vietnam,2024
+2024-10-14,2024-10-17,Keo Hanh Thien Pagoda Festival,lunar,local,Nam Dinh,2024
+2024-10-17,2024-10-22,Co Le Pagoda Festival (Truc Ninh),lunar,local,Nam Dinh,2024
+2024-10-20,2024-10-20,Vietnamese Women's Day,solar,national,Vietnam,2024
+2024-10-31,2024-10-31,Halloween,solar,national,Vietnam,2024
+2024-11-09,2024-11-09,Vietnam Law Day,solar,national,Vietnam,2024
+2024-11-10,2024-11-10,Double Tenth Festival (Tet Trung Thap),lunar,national,Vietnam,2024
+2024-11-15,2024-11-15,Lower Element Festival (Tet Ha Nguyen),lunar,national,Vietnam,2024
+2024-11-15,2024-11-15,Ok Om Bok Festival (Khmer),lunar,local,Mekong Delta (Khmer),2024
+2024-11-19,2024-11-19,International Men's Day,solar,national,Vietnam,2024
+2024-11-20,2024-11-20,Vietnamese Teachers' Day,solar,national,Vietnam,2024
+2024-11-23,2024-11-23,Southern Uprising (Nam Ky Khoi Nghia) Day,solar,local,Tien Giang,2024
+2024-11-23,2024-11-23,Vietnam Red Cross Foundation Day,solar,national,Vietnam,2024
+2024-12-01,2024-12-01,World AIDS Day,solar,national,Vietnam,2024
+2024-12-19,2024-12-19,National Resistance Day,solar,national,Vietnam,2024
+2024-12-22,2024-12-22,Vietnam People's Army Foundation Day,solar,national,Vietnam,2024
+2024-12-24,2024-12-24,Christmas,solar,national,Vietnam,2024
+2025-01-01,2025-01-01,New Year's Day,solar,national,Vietnam,2025
+2025-01-02,2025-01-02,Ap Bac Victory Commemoration,solar,local,Tien Giang,2025
+2025-01-09,2025-01-09,Vietnamese Students' Day,solar,national,Vietnam,2025
+2025-01-20,2025-01-20,Rach Gam - Xoai Mut Victory Commemoration,solar,local,Tien Giang,2025
+2025-01-22,2025-01-22,Kitchen Gods Day (Ong Tao),lunar,national,Vietnam,2025
+2025-01-29,2025-02-02,Lunar New Year (Tet),lunar,national,Vietnam,2025
+2025-02-01,2025-02-01,Ba Den Mountain Festival,lunar,local,Tay Ninh,2025
+2025-02-01,2025-02-02,Dong Da - Tay Son Festival,lunar,local,Binh Dinh,2025
+2025-02-01,2025-02-01,Tram Gian Pagoda Festival,lunar,local,Hanoi,2025
+2025-02-02,2025-02-02,Ba Be Festival,lunar,local,Bac Kan,2025
+2025-02-02,2025-02-02,Lieu Doi Wrestling Festival,lunar,local,Ha Nam,2025
+2025-02-03,2025-02-03,Bai Dinh Pagoda Opening Festival,lunar,local,Ninh Binh,2025
+2025-02-03,2025-02-03,Communist Party of Vietnam Foundation Day,solar,national,Vietnam,2025
+2025-02-03,2025-02-03,Giong Festival at Soc Temple,lunar,local,Hanoi,2025
+2025-02-03,2025-02-05,Hai Ba Trung Temple Festival (Me Linh),lunar,local,Hanoi,2025
+2025-02-03,2025-02-03,Huong Pagoda (Perfume Pagoda) Opening Festival,lunar,local,Hanoi,2025
+2025-02-04,2025-02-04,Long Tong (Going-to-Field) Festival,lunar,local,Ha Giang,2025
+2025-02-05,2025-02-05,Giong Festival at Bo Dau,lunar,local,Hanoi,2025
+2025-02-06,2025-02-06,Jade Emperor Pagoda Festival,lunar,local,Ho Chi Minh City,2025
+2025-02-07,2025-02-07,Dong Dang Festival,lunar,local,Lang Son,2025
+2025-02-07,2025-02-07,Ha Thai Village Festival,lunar,local,Hanoi,2025
+2025-02-07,2025-02-07,Long Tong Festival (Phu Thong),lunar,local,Bac Kan,2025
+2025-02-07,2025-02-07,Yen Tu Festival Opening,lunar,local,Quang Ninh,2025
+2025-02-09,2025-02-09,Boi Khe Pagoda Festival,lunar,local,Hanoi,2025
+2025-02-09,2025-02-11,Lim Festival,lunar,local,Bac Ninh,2025
+2025-02-11,2025-02-11,Ba Chua Kho (Lady of the Treasury) Festival,lunar,local,Bac Ninh,2025
+2025-02-11,2025-02-13,Hoi An Lantern Festival (Tet Nguyen Tieu),lunar,local,Quang Nam,2025
+2025-02-11,2025-02-12,Tran Temple Royal Seal Opening Ceremony,lunar,local,Nam Dinh,2025
+2025-02-12,2025-02-12,Cheo Tau Singing Festival (Dan Phuong),lunar,local,Hanoi,2025
+2025-02-12,2025-02-12,Lantern Festival (Tet Nguyen Tieu),lunar,national,Vietnam,2025
+2025-02-12,2025-02-12,Nhi - Tam Thanh Pagoda Festival,lunar,local,Lang Son,2025
+2025-02-12,2025-02-12,Tet Nguyen Tieu of the Chinese Community,lunar,local,Ho Chi Minh City,2025
+2025-02-12,2025-02-13,Va Temple Festival (Son Tay),lunar,local,Hanoi,2025
+2025-02-14,2025-02-14,Valentine's Day,solar,national,Vietnam,2025
+2025-02-27,2025-02-27,Vietnamese Doctors' Day,solar,national,Vietnam,2025
+2025-02-28,2025-03-05,Truc Temple Festival & Dam Singing,lunar,local,Ha Nam,2025
+2025-03-01,2025-03-01,Tram Pagoda Festival,lunar,local,Hanoi,2025
+2025-03-08,2025-03-08,International Women's Day,solar,national,Vietnam,2025
+2025-03-09,2025-03-11,Dinh Co Festival (Long Hai),lunar,local,Ba Ria - Vung Tau,2025
+2025-03-13,2025-03-15,Nghinh Ong Song Doc Whale Festival,lunar,local,Ca Mau,2025
+2025-03-15,2025-03-19,"Khao Le The Linh (Hoang Sa Soldiers) Ceremony, Ly Son",lunar,local,Quang Ngai,2025
+2025-03-16,2025-03-16,Thang Tam Festival (Vung Tau),lunar,local,Ba Ria - Vung Tau,2025
+2025-03-20,2025-03-20,International Day of Happiness,solar,national,Vietnam,2025
+2025-03-26,2025-03-26,Ho Chi Minh Communist Youth Union Foundation Day,solar,national,Vietnam,2025
+2025-03-29,2025-04-07,Phu Day Festival,lunar,local,Nam Dinh,2025
+2025-03-31,2025-03-31,Cold Food Festival / Thanh Minh (Tet Han Thuc),lunar,national,Vietnam,2025
+2025-04-01,2025-04-01,April Fools' Day,solar,national,Vietnam,2025
+2025-04-02,2025-04-03,Tay Phuong Pagoda Festival (Thach That),lunar,local,Hanoi,2025
+2025-04-02,2025-04-04,Thay Pagoda Festival (Quoc Oai),lunar,local,Hanoi,2025
+2025-04-03,2025-04-03,Binh Da Festival (Thanh Oai),lunar,local,Hanoi,2025
+2025-04-03,2025-04-03,Hat Mon Temple Festival (Phuc Tho),lunar,local,Hanoi,2025
+2025-04-05,2025-04-05,Hai Ba Trung Festival,lunar,local,Ho Chi Minh City,2025
+2025-04-06,2025-04-08,Hoa Lu Festival (Truong Yen),lunar,local,Ninh Binh,2025
+2025-04-07,2025-04-07,Hung Kings Commemoration Day,lunar,national,Vietnam,2025
+2025-04-13,2025-04-15,Chol Chnam Thmay (Khmer New Year),solar,local,Mekong Delta (Khmer),2025
+2025-04-13,2025-04-13,Khe Hoi Village Festival (Thuong Tin),lunar,local,Hanoi,2025
+2025-04-16,2025-04-18,Doi (Long Doi) Pagoda Festival,lunar,local,Ha Nam,2025
+2025-04-17,2025-04-20,Ponagar Tower Festival,lunar,local,Khanh Hoa,2025
+2025-04-20,2025-04-20,Thien Hau Lady Festival,lunar,local,Ho Chi Minh City,2025
+2025-04-30,2025-04-30,Reunification Day (Liberation of the South),solar,national,Vietnam,2025
+2025-05-01,2025-05-01,International Workers' Day,solar,national,Vietnam,2025
+2025-05-05,2025-05-06,Giong Festival at Phu Dong (Gia Lam),lunar,local,Hanoi,2025
+2025-05-07,2025-05-07,Dien Bien Phu Victory Day,solar,national,Vietnam,2025
+2025-05-12,2025-05-12,Buddha's Birthday (Vesak),lunar,national,Vietnam,2025
+2025-05-13,2025-05-13,Mother's Day,solar,national,Vietnam,2025
+2025-05-19,2025-05-24,"Ba Chua Xu Festival, Sam Mountain",lunar,local,An Giang,2025
+2025-05-19,2025-05-19,President Ho Chi Minh's Birthday,solar,national,Vietnam,2025
+2025-05-31,2025-05-31,Mid-Year Festival (Tet Doan Ngo),lunar,national,Vietnam,2025
+2025-06-01,2025-06-01,International Children's Day,solar,national,Vietnam,2025
+2025-06-05,2025-06-07,My Long Sea Worship Festival,lunar,local,Tra Vinh,2025
+2025-06-17,2025-06-17,Father's Day,solar,national,Vietnam,2025
+2025-06-21,2025-06-21,Vietnam Revolutionary Press Day,solar,national,Vietnam,2025
+2025-06-28,2025-06-28,Vietnam Family Day,solar,national,Vietnam,2025
+2025-07-11,2025-07-11,World Population Day,solar,national,Vietnam,2025
+2025-07-12,2025-07-19,Lanh Giang Temple Festival,lunar,local,Ha Nam,2025
+2025-07-27,2025-07-27,War Invalids and Martyrs' Day,solar,national,Vietnam,2025
+2025-07-28,2025-07-28,Vietnam Trade Union Foundation Day,solar,national,Vietnam,2025
+2025-08-19,2025-08-19,August Revolution Commemoration Day,solar,national,Vietnam,2025
+2025-08-20,2025-08-20,Truong Dinh Memorial Day,solar,local,Tien Giang,2025
+2025-08-29,2025-08-29,That Tich (Vietnamese Valentine),lunar,national,Vietnam,2025
+2025-09-02,2025-09-02,National Day (Independence Day),solar,national,Vietnam,2025
+2025-09-06,2025-09-06,Vu Lan / Ghost Festival,lunar,national,Vietnam,2025
+2025-09-10,2025-09-10,Vietnam Fatherland Front Foundation Day,solar,national,Vietnam,2025
+2025-10-01,2025-10-01,International Day of Older Persons,solar,national,Vietnam,2025
+2025-10-06,2025-10-06,Mid-Autumn Festival,lunar,national,Vietnam,2025
+2025-10-06,2025-10-07,Nghinh Ong Can Gio Whale Festival,lunar,local,Ho Chi Minh City,2025
+2025-10-06,2025-10-11,Tran Hung Dao Festival (Tran Temple),lunar,local,Nam Dinh,2025
+2025-10-10,2025-10-10,Liberation of the Capital (Hanoi) Day,solar,national,Vietnam,2025
+2025-10-11,2025-10-11,Tran Thuong Temple Festival,lunar,local,Ha Nam,2025
+2025-10-13,2025-10-13,Vietnam Entrepreneurs' Day,solar,national,Vietnam,2025
+2025-10-17,2025-10-19,Nguyen Trung Truc Festival,lunar,local,Kien Giang,2025
+2025-10-18,2025-10-18,Kieu Ky Village Festival (Gia Lam),lunar,local,Hanoi,2025
+2025-10-20,2025-10-20,Vietnamese Women's Day,solar,national,Vietnam,2025
+2025-10-29,2025-10-29,Double Ninth Festival (Tet Trung Cuu),lunar,national,Vietnam,2025
+2025-10-31,2025-10-31,Halloween,solar,national,Vietnam,2025
+2025-11-01,2025-11-04,Keo Hanh Thien Pagoda Festival,lunar,local,Nam Dinh,2025
+2025-11-04,2025-11-09,Co Le Pagoda Festival (Truc Ninh),lunar,local,Nam Dinh,2025
+2025-11-09,2025-11-09,Vietnam Law Day,solar,national,Vietnam,2025
+2025-11-19,2025-11-19,International Men's Day,solar,national,Vietnam,2025
+2025-11-20,2025-11-20,Vietnamese Teachers' Day,solar,national,Vietnam,2025
+2025-11-23,2025-11-23,Southern Uprising (Nam Ky Khoi Nghia) Day,solar,local,Tien Giang,2025
+2025-11-23,2025-11-23,Vietnam Red Cross Foundation Day,solar,national,Vietnam,2025
+2025-11-29,2025-11-29,Double Tenth Festival (Tet Trung Thap),lunar,national,Vietnam,2025
+2025-12-01,2025-12-01,World AIDS Day,solar,national,Vietnam,2025
+2025-12-04,2025-12-04,Lower Element Festival (Tet Ha Nguyen),lunar,national,Vietnam,2025
+2025-12-04,2025-12-04,Ok Om Bok Festival (Khmer),lunar,local,Mekong Delta (Khmer),2025
+2025-12-19,2025-12-19,National Resistance Day,solar,national,Vietnam,2025
+2025-12-22,2025-12-22,Vietnam People's Army Foundation Day,solar,national,Vietnam,2025
+2025-12-24,2025-12-24,Christmas,solar,national,Vietnam,2025

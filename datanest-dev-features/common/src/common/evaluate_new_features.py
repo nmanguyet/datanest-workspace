@@ -37,12 +37,7 @@ class NewFeatureEvalConfig:
     n_experiments: int = 20
     seed: int = 42
     sample_ratio: Optional[float] = None
-    max_rows_per_experiment: Optional[int] = None
     data_filter: Optional[str] = None
-
-    # Row sampling strategy per experiment: "fixed" | "random" | "filter"
-    row_sample_strategy: str = "fixed"
-    row_filters: Optional[list] = None
 
     # Column names
     target_col: str = "label_value"
@@ -83,34 +78,24 @@ class NewFeatureEvalConfig:
 
     # Scoring thresholds
     reject_gates: dict = field(default_factory=lambda: {
-        "stability": 0.15,
-        "win_rate": 0.50,
+        "stability": 0.15, "win_rate": 0.50, "dominance": 0.47,
     })
     stability: dict = field(default_factory=lambda: {
-        "thresholds": [3, 2, 1, 0.5, 0],
-        "scores": [35, 30, 24, 16, 8],
+        "thresholds": [3, 2, 1, 0.5, 0], "scores": [45, 38, 30, 20, 10],
     })
     win_rate: dict = field(default_factory=lambda: {
         "thresholds": [0.9, 0.8, 0.7, 0.6, 0.55, 0.50, 0],
-        "scores": [25, 22, 18, 14, 10, 6, 0],
+        "scores": [30, 26, 22, 16, 12, 8, 0],
     })
     dominance: dict = field(default_factory=lambda: {
         "thresholds": [0.9, 0.8, 0.7, 0.6, 0.55, 0.50, 0.45, 0],
         "scores": [20, 17, 14, 10, 7, 4, 2, 0],
     })
     p_value: dict = field(default_factory=lambda: {
-        "thresholds": [6, 5, 4, 3, 2, 1],
-        "scores": [5, 4, 3, 2, 1, 0],
+        "thresholds": [-1e-6, -1e-5, -1e-4, -1e-3, -0.01, -0.05, 0],
+        "scores": [5, 4, 3, 2, 1, 0, 0],
     })
-    ci_lo: dict = field(default_factory=lambda: {
-        "thresholds": [0.5, 0.3, 0.1, 0],
-        "scores": [20, 15, 8, 0],
-    })
-    median_gap: dict = field(default_factory=lambda: {
-        "thresholds": [0.5, 0.3, 0.1, 0],
-        "scores": [10, 7, 4, 0]
-    })
-    decision_gates: list = field(default_factory=lambda: [35, 55, 75])
+    decision_gates: list = field(default_factory=lambda: [50, 65, 85])
     decision_labels: list = field(default_factory=lambda: ["reject", "weak_accept", "accept", "strong_accept"])
 
     @classmethod
@@ -200,40 +185,13 @@ def select_experiment_data(
     base_feature_cols: list,
     new_feature_cols: list,
     cfg: NewFeatureEvalConfig,
-    experiment_id: int = 0,
 ) -> pd.DataFrame:
     all_cols = list(dict.fromkeys(cfg.join_keys + [cfg.target_col] + base_feature_cols + new_feature_cols))
     available = [c for c in all_cols if c in spark_df.columns]
     df = spark_df.select(*available)
 
-    strategy = cfg.row_sample_strategy
-
-    if strategy == "filter":
-        filter_expr = None
-        if cfg.row_filters and experiment_id < len(cfg.row_filters) and cfg.row_filters[experiment_id]:
-            filter_expr = cfg.row_filters[experiment_id]
-        if filter_expr:
-            df = df.filter(filter_expr)
-        if cfg.max_rows_per_experiment is not None:
-            n_total = df.count()
-            df = df.sample(n=min(cfg.max_rows_per_experiment, n_total), seed=cfg.seed + experiment_id)
-        elif cfg.sample_ratio is not None:
-            df = df.sample(fraction=cfg.sample_ratio, seed=cfg.seed + experiment_id)
-
-    elif strategy == "random":
-        exp_seed = cfg.seed + experiment_id
-        if cfg.max_rows_per_experiment is not None:
-            n_total = df.count()
-            df = df.sample(n=min(cfg.max_rows_per_experiment, n_total), seed=exp_seed)
-        elif cfg.sample_ratio is not None:
-            df = df.sample(fraction=cfg.sample_ratio, seed=exp_seed)
-
-    else:
-        if cfg.sample_ratio is not None:
-            df = df.sample(fraction=cfg.sample_ratio, seed=cfg.seed)
-        if cfg.max_rows_per_experiment is not None:
-            n_total = df.count()
-            df = df.sample(n=min(cfg.max_rows_per_experiment, n_total), seed=cfg.seed)
+    if cfg.sample_ratio is not None:
+        df = df.sample(fraction=cfg.sample_ratio, seed=cfg.seed)
 
     return df.toPandas()
 
@@ -388,7 +346,7 @@ def run_single_experiment(
 ) -> dict:
     print(f"Running experiment {experiment_id}")
 
-    merged_df = select_experiment_data(spark_df, base_feature_cols, new_feature_cols, cfg, experiment_id)
+    merged_df = select_experiment_data(spark_df, base_feature_cols, new_feature_cols, cfg)
 
     categorical_cols = [
         c for c in merged_df.select_dtypes(include=["object", "category"]).columns
@@ -481,7 +439,6 @@ def calculate_experiment_metrics(results_df: pd.DataFrame) -> dict:
     auc_gap = results_df["gap"].values
     n = len(results_df)
     mean_gap = auc_gap.mean()
-    median_gap = auc_gap.median()
     std_gap = auc_gap.std()
 
     if std_gap == 0:
@@ -498,7 +455,6 @@ def calculate_experiment_metrics(results_df: pd.DataFrame) -> dict:
 
     return {
         "mean_gap": mean_gap,
-        "median_gap": median_gap,
         "std_gap": std_gap,
         "ci_lo": ci_lo,
         "ci_hi": ci_hi,
@@ -514,7 +470,7 @@ def calculate_experiment_metrics(results_df: pd.DataFrame) -> dict:
 
 def evaluate_feature(metrics: dict, cfg: NewFeatureEvalConfig) -> dict:
     g = cfg.reject_gates
-    stability = min(metrics["mean_gap"] / max(metrics["std_gap"], 1e-8), 1000)
+    stability = metrics["mean_gap"] / max(metrics["std_gap"], 1e-8)
 
     if metrics["mean_gap"] <= 0:
         return {"decision": "reject", "reason": "negative uplift"}
@@ -522,8 +478,8 @@ def evaluate_feature(metrics: dict, cfg: NewFeatureEvalConfig) -> dict:
         return {"decision": "reject", "reason": "unstable feature"}
     if metrics["win_rate"] < g["win_rate"]:
         return {"decision": "reject", "reason": "low consistency"}
-    if metrics["ci_lo"] <= 0:
-        return {"decision": "reject", "reason": "ci crosses zero"}
+    if metrics["dominance"] < g["dominance"]:
+        return {"decision": "reject", "reason": "weak dominance"}
 
     total = sum(
         _score_from_thresholds(
@@ -531,24 +487,24 @@ def evaluate_feature(metrics: dict, cfg: NewFeatureEvalConfig) -> dict:
             getattr(cfg, k)["thresholds"],
             getattr(cfg, k)["scores"],
         )
-        for k in ("stability", "win_rate", "ci_lo", "median_gap")
+        for k in ("stability", "win_rate", "dominance")
+    )
+
+    best_p = min(metrics["p_value_ttest"], metrics["p_value_wilcoxon"])
+    total += _score_from_thresholds(
+        best_p, cfg.p_value["thresholds"], cfg.p_value["scores"],
     )
 
     decision = cfg.decision_labels[sum(total >= g for g in cfg.decision_gates)]
 
-    result =  {
+    return {
         "decision": decision,
         "score": round(total, 2),
         "stability": round(stability, 4),
         "win_rate": round(metrics["win_rate"], 4),
         "dominance": round(metrics["dominance"], 4),
-        "best_pvalue": min(metrics["p_value_ttest"], metrics["p_value_wilcoxon"]),
+        "best_pvalue": best_p,
     }
-
-    if decision == "reject":
-        result["reason"] = "low score"
-    
-    return result
 
 
 # ==============================================================================

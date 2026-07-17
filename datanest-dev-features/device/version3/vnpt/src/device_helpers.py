@@ -25,15 +25,17 @@ def build_tac_columns(prefix: str, suffix: str = "l12w") -> List[str]:
     return [
         f"case when {prefix}_tac_{suffix} is null then null when {prefix}_brand_{suffix} is null then 'unmapped' else lower({prefix}_brand_{suffix}) end as {prefix}_brand_{suffix}",
         f"case when {prefix}_tac_{suffix} is null then null when {prefix}_model_{suffix} is null then 'unmapped' else lower({prefix}_model_{suffix}) end as {prefix}_model_{suffix}",
-        f"""
-        case
-            when {prefix}_tac_{suffix} is null then null
-            when {prefix}_brand_{suffix} is null then 'unmapped'
-            when lower({prefix}_brand_{suffix}) = 'apple'
-                or lower({prefix}_model_{suffix}) like '%iphone%'
-                or lower({prefix}_model_{suffix}) like '%apple%'
-                then 'ios'
-            else 'android'
-        end as {prefix}_os_{suffix}
-        """,
+        f"case when {prefix}_tac_{suffix} is null then null when {prefix}_os_{suffix} is null then 'unmapped' else lower({prefix}_os_{suffix}) end as {prefix}_os_{suffix}",
+        f"case when {prefix}_tac_{suffix} is null then null when {prefix}_type_{suffix} is null then 'unmapped' else lower({prefix}_type_{suffix}) end as {prefix}_type_{suffix}",
+#        f"""
+#        case
+#            when {prefix}_tac_{suffix} is null then null
+#            when {prefix}_brand_{suffix} is null then 'unmapped'
+#            when lower({prefix}_brand_{suffix}) = 'apple'
+#                or lower({prefix}_model_{suffix}) like '%iphone%'
+#                or lower({prefix}_model_{suffix}) like '%apple%'
+#                then 'ios'
+#            else 'android'
+#        end as {prefix}_os_{suffix}
+#        """,
     ]
