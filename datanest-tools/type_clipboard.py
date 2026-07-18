@@ -1,13 +1,31 @@
-import argparse
+##
+import fcntl
 import os
 import shutil
 import subprocess
 import sys
+import tempfile
 import time
 
-TITLE = "VM TurboTyper"
+# ============================================================
+# CAU HINH - chinh thong so cho tung che do o day
+# ============================================================
+# --- Code KHO (VM kho tinh) ---
+HARD_WAIT          = 4      # giay cho de click vao VM
+HARD_DELAY_MS      = 20     # do tre giua cac phim (ms); rot ky tu -> tang len
+HARD_NEWLINE_PAUSE = 0.03   # nghi them sau moi lan xuong dong
+HARD_CHUNK         = 20     # so phim moi lot, kiem tra dung khan cap giua cac lot
+HARD_STOP_CORNER   = True   # dua chuot len goc TREN-TRAI de dung
 
-# --- anh xa ky tu dac biet -> ten keysym cua X (giong bang keyMap cua macOS) ---
+# --- Code DE (VPN thuong) ---
+EASY_WAIT     = 5           # giay cho de click vao cua so remote
+EASY_DELAY_MS = 10          # do tre khi xdotool type
+
+# --- Chung cho CA 2 che do ---
+CHECK_VIETNAMESE = True     # dang bat bo go tieng Viet -> bao va dung (ca 2 che do)
+# ============================================================
+
+# Anh xa ky tu dac biet -> ten keysym cua X (dung cho Code KHO)
 SPECIAL = {
     " ": "space",
     "!": "exclam", "@": "at", "#": "numbersign", "$": "dollar",
@@ -20,20 +38,39 @@ SPECIAL = {
     "/": "slash", "?": "question", "`": "grave", "~": "asciitilde",
 }
 
-# --- chuan hoa ky tu "thong minh" ve ASCII (giong phan \u201C... cua macOS) ---
+# Chuan hoa ky tu "thong minh" ve ASCII (dung cho Code KHO)
 SMART = {
-    "\u201c": '"', "\u201d": '"',   # " "  -> "
-    "\u2018": "'", "\u2019": "'",   # ' '  -> '
-    "\u2013": "-", "\u2014": "-",   # - -  -> -
-    "\u00a0": " ",                  # non-breaking space -> space
-    "\u2026": "...",                # ...  -> ...
+    "\u201c": '"', "\u201d": '"',
+    "\u2018": "'", "\u2019": "'",
+    "\u2013": "-", "\u2014": "-",
+    "\u00a0": " ",
+    "\u2026": "...",
 }
 
 VN_MARKERS = ("bamboo", "unikey", "telex", "vni", "viqr", "vietnam", "openkey")
 
 
+# ------------------------- helper dung chung -------------------------
+
 def have(cmd):
     return shutil.which(cmd) is not None
+
+
+_lock_fh = None  # giu tham chieu de khoa khong bi giai phong som
+
+
+def acquire_single_instance():
+    """Chi cho phep 1 phien chay. Neu da co phien khac -> thoat ngay.
+    flock tu dong nha khi tien trinh ket thuc, khong lo file khoa cu."""
+    global _lock_fh
+    path = os.path.join(tempfile.gettempdir(), "vm_turbotyper.lock")
+    _lock_fh = open(path, "w")
+    try:
+        fcntl.flock(_lock_fh, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except (BlockingIOError, OSError):
+        print("Da co mot phien VM TurboTyper dang chay -> thoat.",
+              file=sys.stderr)
+        sys.exit(0)
 
 
 def _out(cmd):
@@ -44,20 +81,7 @@ def _out(cmd):
         return ""
 
 
-def _is_vn(s):
-    s = (s or "").lower()
-    return any(m in s for m in VN_MARKERS)
-
-
-def die(msg, code=1):
-    print("[LOI] " + msg, file=sys.stderr)
-    if have("zenity"):
-        subprocess.run(["zenity", "--error", "--title", TITLE, "--text", msg])
-    sys.exit(code)
-
-
 def read_clipboard():
-    """Doc clipboard, thu lan luot xclip -> xsel -> wl-paste."""
     for cmd in (["xclip", "-selection", "clipboard", "-o"],
                 ["xsel", "-b", "-o"],
                 ["wl-paste", "-n"]):
@@ -66,29 +90,146 @@ def read_clipboard():
                 return subprocess.check_output(cmd, text=True)
             except subprocess.CalledProcessError:
                 return ""
-    die("Khong tim thay xclip / xsel / wl-paste de doc clipboard.")
+    print("[LOI] Khong tim thay xclip / xsel / wl-paste.", file=sys.stderr)
+    sys.exit(1)
 
 
-def detect_ime():
-    """Tra ve (mo_ta, co_ve_tieng_viet?). Tuong duong buoc check ABC/US cua macOS."""
+def countdown(seconds):
+    for s in range(int(seconds), 0, -1):
+        print("  Bat dau sau %ds... (click vao cua so remote)" % s,
+              end="\r", flush=True)
+        time.sleep(1)
+    print(" " * 55, end="\r")
+
+
+# ------------------------- CHON CHE DO -------------------------
+
+def _choose_tk():
+    """3 nut dung thu tu bang tkinter; nut X = thoat an toan.
+    Tra ve 'easy' / 'hard' / None, hoac 'no-tk' neu khong dung duoc tkinter."""
+    try:
+        import tkinter as tk
+        result = {"v": None}
+        root = tk.Tk()
+        root.title("VM TurboTyper")
+        root.resizable(False, False)
+        tk.Label(root, text="Chon nha mang:", padx=24, pady=16).pack()
+        bar = tk.Frame(root, padx=16, pady=16)
+        bar.pack()
+
+        def pick(v):
+            result["v"] = v
+            root.destroy()
+
+        # Thu tu tu trai sang phai: Viettel -> VNPT -> Thoat
+        tk.Button(bar, text="1 - Viettel", width=12, height=2,
+                  command=lambda: pick("easy")).pack(side="left", padx=6)
+        tk.Button(bar, text="2 - VNPT", width=12, height=2,
+                  command=lambda: pick("hard")).pack(side="left", padx=6)
+        tk.Button(bar, text="Thoat", width=12, height=2,
+                  command=lambda: pick(None)).pack(side="left", padx=6)
+
+        root.protocol("WM_DELETE_WINDOW", lambda: pick(None))  # nut X = thoat
+        root.update_idletasks()
+        w, h = root.winfo_width(), root.winfo_height()
+        root.geometry("+%d+%d" % ((root.winfo_screenwidth() - w) // 2,
+                                  (root.winfo_screenheight() - h) // 3))
+        root.mainloop()
+        return result["v"]
+    except Exception:
+        return "no-tk"
+
+
+def choose_mode():
+    """Hien cua so chon che do; tra ve 'hard' / 'easy' / None (thoat).
+    Viettel = Code DE (go nhanh) ; VNPT = Code KHO (kiem tra tieng Viet)."""
+    r = _choose_tk()
+    if r != "no-tk":
+        return r
+
+    # Khong co tkinter -> zenity dang list (nut X van thoat an toan)
+    if have("zenity"):
+        out = subprocess.run(
+            ["zenity", "--list", "--title", "VM TurboTyper",
+             "--text", "Chon nha mang:", "--column", "Nha mang",
+             "--ok-label", "Chon", "--cancel-label", "Thoat",
+             "--width", "300", "--height", "220",
+             "1 - Viettel", "2 - VNPT"],
+            capture_output=True, text=True).stdout.strip()
+        if out.startswith("1"):
+            return "easy"
+        if out.startswith("2"):
+            return "hard"
+        return None
+
+    # Fallback cuoi: hoi trong terminal
+    while True:
+        c = input("Chon:  [1] Viettel (DE)   [2] VNPT (KHO)   (q = thoat): ") \
+            .strip().lower()
+        if c == "1":
+            return "easy"
+        if c == "2":
+            return "hard"
+        if c in ("q", "quit", "exit"):
+            return None
+
+
+# ------------------------- CODE DE -------------------------
+
+def run_easy():
+    text = read_clipboard()
+    if not text.strip():
+        print("[LOI] Clipboard rong.", file=sys.stderr)
+        return
+    print("Che do DE - se go %d ky tu. (Ctrl+C de dung)" % len(text))
+    countdown(EASY_WAIT)
+    try:
+        for ch in text:
+            if ch == "\n":
+                subprocess.run(["xdotool", "key", "Return"])
+            elif ch == "\t":
+                subprocess.run(["xdotool", "key", "Tab"])
+            else:
+                subprocess.run(["xdotool", "type", "--delay",
+                                str(EASY_DELAY_MS), "--", ch])
+    except KeyboardInterrupt:
+        print("\n[DUNG] Ctrl+C.")
+        return
+    print("Hoan tat.")
+
+
+# ------------------------- CODE KHO -------------------------
+
+def _is_vn(s):
+    s = (s or "").lower()
+    return any(m in s for m in VN_MARKERS)
+
+
+def detect_vietnamese():
     if have("fcitx5-remote"):
         active = _out(["fcitx5-remote"])          # "1"=off, "2"=on
         name = _out(["fcitx5-remote", "-n"])
-        desc = "fcitx5 [%s] trang_thai=%s" % (name or "?", active or "?")
-        return desc, (active == "2" or _is_vn(name))
+        return "fcitx5 [%s] trang_thai=%s" % (name or "?", active or "?"), \
+               (active == "2" or _is_vn(name))
     if have("fcitx-remote"):
         active = _out(["fcitx-remote"])
         return "fcitx trang_thai=%s" % (active or "?"), active == "2"
     if have("ibus"):
         eng = _out(["ibus", "engine"])
-        # xkb:* la layout thuong (an toan); ten rieng nhu Bamboo la bo go VN
         vn = (bool(eng) and not eng.startswith("xkb:")) or _is_vn(eng)
         return "ibus [%s]" % (eng or "?"), vn
     return None, False
 
 
+def warn_and_exit(msg):
+    print("[LOI] " + msg, file=sys.stderr)
+    if have("zenity"):
+        subprocess.run(["zenity", "--error", "--title", "VM TurboTyper",
+                        "--text", msg])
+    sys.exit(1)
+
+
 def mouse_in_corner():
-    """Dung khan cap: chuot len goc TREN-TRAI (giong isEmergencyStop cua macOS)."""
     out = _out(["xdotool", "getmouselocation", "--shell"])
     d = {}
     for line in out.splitlines():
@@ -104,91 +245,86 @@ def mouse_in_corner():
 def char_to_keysym(ch):
     if ch in SPECIAL:
         return SPECIAL[ch]
-    if ch.isalnum() and ord(ch) < 128:   # a-z A-Z 0-9
+    if ch.isalnum() and ord(ch) < 128:
         return ch
-    return "U%04X" % ord(ch)             # keysym unicode, vd 'd/' -> U0111
+    return "U%04X" % ord(ch)
 
 
-def main():
-    # allow_abbrev=False: trong Jupyter, sys.argv chua '--f=/run/.../kernel-xxx.json'
-    # cua kernel -> neu cho phep viet tat, '--f' se tro thanh '--force' va loi
-    # "ignored explicit argument". Tat abbrev de '--f' thanh tham so la.
-    ap = argparse.ArgumentParser(description="Go clipboard vao VM/remote.",
-                                 allow_abbrev=False)
-    ap.add_argument("--wait", type=float, default=4.0,
-                    help="So giay cho de ban click vao VM (mac dinh 4).")
-    ap.add_argument("--delay", type=int, default=12,
-                    help="Do tre giua cac phim, ms (mac dinh 12).")
-    ap.add_argument("--force", action="store_true",
-                    help="Bo qua canh bao bo go tieng Viet.")
-    # parse_known_args: bo qua tham so cua kernel Jupyter (-f kernel-xxx.json)
-    args, _unknown = ap.parse_known_args()
-
-    # 0. Kiem tra moi truong
-    if os.environ.get("XDG_SESSION_TYPE", "").lower() == "wayland":
-        die("Ban dang chay Wayland. xdotool chi hoat dong tren X11.\n"
-            "Dang nhap lai chon phien 'Xorg/X11' roi thu lai.")
-    if not have("xdotool"):
-        die("Chua cai xdotool. Cai: sudo apt install xdotool")
-
-    # 1. Kiem tra bo go (giong buoc check ABC/US cua macOS)
-    desc, vn = detect_ime()
-    if desc:
-        print("Bo go hien tai: " + desc)
-    if vn and not args.force:
-        die("Phat hien bo go tieng Viet dang BAT (%s).\n"
-            "Hay chuyen ve English/US (tat Telex/VNI/Unikey) roi chay lai.\n"
-            "Neu chac chan muon tiep tuc, them co --force." % (desc or "?"))
-
-    # 2. Doc clipboard + chuan hoa ky tu thong minh
+def run_hard():
     text = read_clipboard()
     for a, b in SMART.items():
         text = text.replace(a, b)
     if not text.strip():
-        die("Clipboard rong - hay copy noi dung truoc.")
-    print("Se go %d ky tu." % len(text))
+        print("[LOI] Clipboard rong.", file=sys.stderr)
+        return
 
-    # 3. Dem nguoc de click vao cua so VM
-    print("DUNG KHAN CAP: nhan Ctrl+C, hoac dua chuot len goc TREN-TRAI man hinh.")
-    for s in range(int(args.wait), 0, -1):
-        print("  Bat dau sau %ds... (click vao VM ngay)" % s, end="\r", flush=True)
-        time.sleep(1)
-    print(" " * 55, end="\r")
+    print("Che do KHO - se go %d ky tu." % len(text))
+    print("DUNG KHAN CAP: Ctrl+C" +
+          (", hoac dua chuot len goc TREN-TRAI." if HARD_STOP_CORNER else "."))
+    countdown(HARD_WAIT)
 
-    # 4. Go theo tung cum, kiem tra dung giua cac cum
-    CHUNK = 20
     buf = []
 
     def flush():
-        nonlocal buf
         if buf:
             subprocess.run(["xdotool", "key", "--clearmodifiers",
-                            "--delay", str(args.delay), *buf])
-            buf = []
+                            "--delay", str(HARD_DELAY_MS), *buf])
+            buf.clear()
 
     try:
         for ch in text:
             if ch in ("\n", "\r"):
                 flush()
                 subprocess.run(["xdotool", "key", "--clearmodifiers", "Return"])
-                time.sleep(0.02)          # xuong dong can nhieu thoi gian hon
+                time.sleep(HARD_NEWLINE_PAUSE)
                 continue
-            if ch == "\t":
-                buf.append("Tab")
-            else:
-                buf.append(char_to_keysym(ch))
-            if len(buf) >= CHUNK:
+            buf.append("Tab" if ch == "\t" else char_to_keysym(ch))
+            if len(buf) >= HARD_CHUNK:
                 flush()
-                if mouse_in_corner():
+                if HARD_STOP_CORNER and mouse_in_corner():
                     print("\n[DUNG] Chuot o goc tren-trai.")
                     return
         flush()
     except KeyboardInterrupt:
         print("\n[DUNG] Ctrl+C.")
         return
-
     print("Hoan tat.")
+
+
+# ------------------------- MAIN -------------------------
+
+def main():
+    acquire_single_instance()
+
+    if not have("xdotool"):
+        print("[LOI] Chua cai xdotool. Cai: sudo apt install xdotool",
+              file=sys.stderr)
+        sys.exit(1)
+
+    mode = choose_mode()
+    if mode is None:
+        print("Da huy.")
+        return
+    print("Da chon: %s" % ("VNPT - Code KHO" if mode == "hard"
+                           else "Viettel - Code DE"))
+
+    # Kiem tra bo go tieng Viet - ap dung cho CA 2 che do
+    if CHECK_VIETNAMESE:
+        desc, vn = detect_vietnamese()
+        if desc:
+            print("Bo go hien tai: " + desc)
+        if vn:
+            warn_and_exit(
+                "Dang BAT bo go tieng Viet (%s).\n\n"
+                "Code chi go dung khi o che do English/US.\n"
+                "Hay tat Telex/VNI/Unikey roi chay lai." % (desc or "?"))
+
+    if mode == "hard":
+        run_hard()
+    else:
+        run_easy()
 
 
 if __name__ == "__main__":
     main()
+##
