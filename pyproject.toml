@@ -1,7 +1,6 @@
 [project]
 name = "dev_fts"
 version = "0.1.4"
-# Chặn không cho uv tự động quét lên Python 3.14 (nguyên nhân gây lỗi build wheel)
 requires-python = ">=3.12, <3.13"
 dependencies = [
     "numpy>=2.3.3",
@@ -12,6 +11,9 @@ dependencies = [
     "scikit-learn>=1.8.0",
     "catboost>=1.2.10",
 ]
+
+[project.scripts]
+autotype = "datanest-tools.type_clipboard:main"
 
 [dependency-groups]
 dev = [

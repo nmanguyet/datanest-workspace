@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: dev_fts
+Version: 0.1.4
+Requires-Python: <3.13,>=3.12
+Requires-Dist: numpy>=2.3.3
+Requires-Dist: pandas>=2.3.3
+Requires-Dist: plotly>=6.3.1
+Requires-Dist: duckdb>=1.4.3
+Requires-Dist: seaborn>=0.13.2
+Requires-Dist: scikit-learn>=1.8.0
+Requires-Dist: catboost>=1.2.10
