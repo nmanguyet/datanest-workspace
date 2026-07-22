@@ -2,7 +2,7 @@ from pathlib import Path
 from datetime import datetime, timedelta
 from pyspark.sql import functions as F
 from pyspark.sql.window import Window
-from pyspark.import StorageLevel
+from pyspark import StorageLevel
 
 import re
 import sys

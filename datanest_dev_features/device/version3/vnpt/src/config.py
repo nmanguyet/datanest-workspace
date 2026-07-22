@@ -32,11 +32,11 @@ CURRENT_TAC_RANKS = [
 
 # build_device_tac_behaviour_feature
 DEVICE_TAC_BEHAVIOUR_FEATURES_PATH = f"{FEATURE_ROOT}/device_tac_behaviour_features_lxw"
-DEVICE_CURRENT_TAC_COLUMN = 'device_current_tac_12w'
+DEVICE_CURRENT_TAC_COLUMN = 'device_current_tac_l2w'
 
 # build_device_brand_behaviour_feature
 DEVICE_BRAND_BEHAVIOUR_FEATURES_PATH = f"{FEATURE_ROOT}/device_brand_behaviour_features_lxw"
-DEVICE_CURRENT_BRAND_COLUMN = 'device_current_brand_12w'
+DEVICE_CURRENT_BRAND_COLUMN = 'device_current_brand_l2w'
 
 
 def configure(snapshot_date_str: str = None):

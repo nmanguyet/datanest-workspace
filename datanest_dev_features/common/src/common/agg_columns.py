@@ -152,7 +152,7 @@ def build_aggregate_columns(
 
     sub_entropy_filled = entropy_sub_template.replace(
         "SUM({column}) OVER (PARTITION BY phone_number)",
-        f"SUM({{{column}}}) OVER (PARTITION BY {entropy_partition_col})",
+        f"SUM({{column}}) OVER (PARTITION BY {entropy_partition_col})",
     )
 
     columns = []
